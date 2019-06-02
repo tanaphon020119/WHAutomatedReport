@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewData["Title"] = "C3";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">C3</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>
+                    Line Chart, Pie Chart, Scattered Chart, Donut Chart, Bar Chart, Bar Stack Chart, Area Chart, Spline
+                    Chart,
+                    Step Chart and Gauge Chart
+                </p>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Line Chart</h4>
+                    <div class="chart-container">
+                        <div id="lineChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Spline Chart</h4>
+                    <div class="chart-container">
+                        <div id="splineChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Area Chart</h4>
+                    <div class="chart-container">
+                        <div id="areaChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Step Chart</h4>
+                    <div class="chart-container">
+                        <div id="stepChart" style="width:100%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bar Chart</h4>
+                    <div class="chart-container">
+                        <div id="barChart" style="width:100%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bar Stack Chart</h4>
+                    <div class="chart-container">
+                        <div id="barStackChart" style="width:100%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Pie Chart</h4>
+                    <div class="chart-container">
+                        <div id="pieChart" style="width:100%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Scattered Chart</h4>
+                    <div class="chart-container">
+                        <div id="scatterChart" style="width:100%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Donut Chart</h4>
+                    <div class="chart-container">
+                        <div id="donutChart" style="width:100%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Gauge Chart</h4>
+                    <div class="chart-container">
+                        <div id="gaugeChart" style="width:100%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/c3/css/c3.min.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/d3/js/d3.min.js"></script>
+    <script src="~/assets/vendor/c3/js/c3.min.js"></script>
+    <script src="~/assets/js/demo/c3-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

@@ -1,42 +1,45 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Nice Theme - @ViewData["Title"] </title>
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" type="image/x-icon" />
+
+    @RenderSection("Styles", required: false)
+
+    <!-- ================== APP CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+    <!-- ================== APP CSS END ================== -->
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    <!-- Wrapper Start -->
+    <div id="wrapper">
+        @Html.Partial("_Header")
+        <!-- Content Wrapper Start -->
+        <div class="main-wrapper" id="main-wrapper">
+            @Html.Partial("_Navigation")
+            <!-- Main Start -->
+            <main>
+                @RenderBody()
+                @Html.Partial("_Footer")
+            </main><!-- Main End -->
+        </div><!-- Content Wrapper End -->
+    </div><!-- Wrapper End -->
+    @Html.Partial("_Settings")
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="~/assets/vendor/jQuery/js/jquery-3.2.1.min.js"></script>
+    <script src="~/assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="~/assets/vendor/html5shiv/js/html5shiv.js"></script>
+      <script src="~/assets/vendor/respondjs/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="~/assets/js/app.js"></script>
+    <!-- ================== END BASE JS ================== -->
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

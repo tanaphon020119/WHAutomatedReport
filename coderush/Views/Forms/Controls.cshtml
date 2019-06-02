@@ -1,0 +1,394 @@
+﻿
+@{
+    ViewData["Title"] = "Controls";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Custom Controls</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>A control is a seprate element that can be added into pages.</p>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Checkboxs</h4>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-checkbox">
+                                <input class="form-check-input" type="checkbox">
+                                Default
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-checkbox primary-checkbox">
+                                <input class="form-check-input" type="checkbox">
+                                Primary
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-checkbox warning-checkbox">
+                                <input class="form-check-input" type="checkbox">
+                                Warning
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-checkbox danger-checkbox">
+                                <input class="form-check-input" type="checkbox">
+                                Danger
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-checkbox success-checkbox">
+                                <input class="form-check-input" type="checkbox">
+                                Success
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-checkbox info-checkbox">
+                                <input class="form-check-input" type="checkbox">
+                                Info
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-checkbox dark-checkbox">
+                                <input class="form-check-input" type="checkbox">
+                                Dark
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Radio</h4>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-radio">
+                                <input class="form-check-input" type="radio" name="radio">
+                                Default
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-radio primary-radio">
+                                <input class="form-check-input" type="radio" name="radio">
+                                Primary
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-radio warning-radio">
+                                <input class="form-check-input" type="radio" name="radio">
+                                Warning
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-radio danger-radio">
+                                <input class="form-check-input" type="radio" name="radio">
+                                Danger
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-radio success-radio">
+                                <input class="form-check-input" type="radio" name="radio">
+                                Success
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-radio info-radio">
+                                <input class="form-check-input" type="radio" name="radio">
+                                Info
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group d-inline mr-3">
+                        <div class="form-check">
+                            <label class="custom-radio dark-radio">
+                                <input class="form-check-input" type="radio" name="radio">
+                                Dark
+                                <i class="input-helper"></i>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Upload</h4>
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                            <fieldset class="form-group">
+                                <label>File upload</label>
+                                <input type="file" name="img[]" class="file-upload-default">
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                    <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                                    </span>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                            <fieldset class="form-group">
+                                <label>File upload</label>
+                                <input type="file" name="img[]" class="file-upload-default">
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                    <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-secondary" type="button">Upload</button>
+                                    </span>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                            <fieldset class="form-group">
+                                <label>File upload</label>
+                                <input type="file" name="img[]" class="file-upload-default">
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                    <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-warning" type="button">Upload</button>
+                                    </span>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                            <fieldset class="form-group">
+                                <label>File upload</label>
+                                <input type="file" name="img[]" class="file-upload-default">
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                    <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-danger" type="button">Upload</button>
+                                    </span>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                            <fieldset class="form-group">
+                                <label>File upload</label>
+                                <input type="file" name="img[]" class="file-upload-default">
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                    <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-success" type="button">Upload</button>
+                                    </span>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                            <fieldset class="form-group">
+                                <label>File upload</label>
+                                <input type="file" name="img[]" class="file-upload-default">
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                    <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-info" type="button">Upload</button>
+                                    </span>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                            <fieldset class="form-group">
+                                <label>File upload</label>
+                                <input type="file" name="img[]" class="file-upload-default">
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                    <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-dark" type="button">Upload</button>
+                                    </span>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                            <fieldset class="form-group">
+                                <label>File upload</label>
+                                <input type="file" name="img[]" class="file-upload-default">
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                    <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-light" type="button">Upload</button>
+                                    </span>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Submit Buttons</h4>
+                    <button class="btn btn-primary submit-btn with-arrow rounded-border mr-2 mb-4">
+                        Submit
+                    </button>
+                    <button class="btn btn-info submit-btn with-chevron rounded-border mr-2 mb-4">
+                        Submit
+                    </button>
+                    <button class="btn btn-warning submit-btn-icon with-arrow mr-2 mb-4"></button>
+                    <button class="btn btn-success submit-btn-icon with-chevron mr-2 mb-4"></button>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Switchers</h4>
+                    <label class="switcher">
+                        <input type="checkbox" class="switcher-input">
+                        <span class="switcher-indicator">
+                        </span>
+                        <span class="switcher-label">Default</span>
+                    </label>
+                    <label class="switcher">
+                        <input type="checkbox" class="switcher-input">
+                        <span class="switcher-indicator">
+                            <span class="switcher-yes">
+                                <i class="mdi mdi-check"></i>
+                            </span>
+                            <span class="switcher-no">
+                                <i class="mdi mdi-close"></i>
+                            </span>
+                        </span>
+                        <span class="switcher-label">With icon</span>
+                    </label>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Switchers States</h4>
+                    <label class="switcher success">
+                        <input type="checkbox" class="switcher-input">
+                        <span class="switcher-indicator">
+                            <span class="switcher-yes">
+                                <i class="mdi mdi-check"></i>
+                            </span>
+                            <span class="switcher-no">
+                                <i class="mdi mdi-close"></i>
+                            </span>
+                        </span>
+                        <span class="switcher-label">Success</span>
+                    </label>
+                    <label class="switcher warning">
+                        <input type="checkbox" class="switcher-input">
+                        <span class="switcher-indicator">
+                            <span class="switcher-yes">
+                                <i class="mdi mdi-check"></i>
+                            </span>
+                            <span class="switcher-no">
+                                <i class="mdi mdi-close"></i>
+                            </span>
+                        </span>
+                        <span class="switcher-label">Warning</span>
+                    </label>
+                    <label class="switcher danger">
+                        <input type="checkbox" class="switcher-input">
+                        <span class="switcher-indicator">
+                            <span class="switcher-yes">
+                                <i class="mdi mdi-check"></i>
+                            </span>
+                            <span class="switcher-no">
+                                <i class="mdi mdi-close"></i>
+                            </span>
+                        </span>
+                        <span class="switcher-label">Danger</span>
+                    </label>
+                    <label class="switcher info">
+                        <input type="checkbox" class="switcher-input">
+                        <span class="switcher-indicator">
+                            <span class="switcher-yes">
+                                <i class="mdi mdi-check"></i>
+                            </span>
+                            <span class="switcher-no">
+                                <i class="mdi mdi-close"></i>
+                            </span>
+                        </span>
+                        <span class="switcher-label">Info</span>
+                    </label>
+                    <label class="switcher secondary">
+                        <input type="checkbox" class="switcher-input">
+                        <span class="switcher-indicator">
+                            <span class="switcher-yes">
+                                <i class="mdi mdi-check"></i>
+                            </span>
+                            <span class="switcher-no">
+                                <i class="mdi mdi-close"></i>
+                            </span>
+                        </span>
+                        <span class="switcher-label">Secondary</span>
+                    </label>
+                    <label class="switcher dark">
+                        <input type="checkbox" class="switcher-input">
+                        <span class="switcher-indicator">
+                            <span class="switcher-yes">
+                                <i class="mdi mdi-check"></i>
+                            </span>
+                            <span class="switcher-no">
+                                <i class="mdi mdi-close"></i>
+                            </span>
+                        </span>
+                        <span class="switcher-label">Dark</span>
+                    </label>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/js/file-browse.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

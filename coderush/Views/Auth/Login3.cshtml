@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "Login3";
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> @ViewData["Title"] </title>
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" type="image/x-icon" />
+    <!-- ================== APP CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+    <!-- ================== APP CSS END ================== -->
+</head>
+<body>
+    <div class="login-container  d-flex align-items-center">
+        <div class="login-content">
+            <div class="login-inner-container">
+                <div class="left-content text-center">
+                    <img src="~/assets/images/logo.png" alt="let start">
+                </div>
+                <div class="right-content">
+                    <div class="form-content">
+                        <h3>Login to app</h3>
+                        <form action="#">
+                            <div class="form-group">
+                                <fieldset>
+                                    <div class="icon">
+                                        <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+                                    </div>
+                                    <input class="form-control" placeholder="Username or Email" name="email" type="text" />
+                                </fieldset>
+                            </div>
+                            <div class="form-group">
+                                <fieldset>
+                                    <div class="icon">
+                                        <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
+                                    </div>
+                                    <input class="form-control" placeholder="Password" name="password" type="password" />
+                                </fieldset>
+                            </div>
+                            <div class="forgot-password">
+                                <div class="remember">
+                                    <input type="checkbox" id="remember" />
+                                    <label for="remember">Remember login</label>
+                                </div>
+                                <a href="javascript:void(0)" class="forgot-link">Forgot Password</a>
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-block btn-primary">Log In</button>
+                                <p class="small">Don't have an account? <a href="/Auth/@Pages.Register3.Value">Register</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="third-party-login">
+                        <div class="google-login">
+                            <a href="javascript:void(0)">Log In with google</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

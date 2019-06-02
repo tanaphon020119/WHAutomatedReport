@@ -1,0 +1,235 @@
+﻿
+@{
+    ViewData["Title"] = "Template";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 mb-4">
+            <table width="600" align="center" cellpadding="0" cellspacing="0" class="email-template">
+                <tr>
+                    <td style="padding:15px;border:1px solid #e9e9e9;background:#fff;">
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="header">
+                                        Creative Design
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="header-text">
+                                        <h3>Welcom in basic email template</h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                        scrambled it to make a type specimen book. It has survived not only five centuries.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                                        industry's standard dummy text ever since the 1500s,
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="button">
+                                        <a href="javascript:void(0)" class="btn-primary">Confirm Email Address</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-12">
+            <table width="600" align="center" cellpadding="0" cellspacing="0" class="email-template-V2">
+                <tr>
+                    <td style="padding:15px;border:1px solid #e9e9e9;background:#fff;">
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="header">
+                                        Creative Design
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="header-text">
+                                        <h3>Hi</h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h3>Item in your order has been delivered</h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>We are pleased to confirm your order no OD111069004029226000.</td>
+                                </tr>
+                                <tr>
+                                    <td> Thank you for shopping</td>
+                                </tr>
+                                <tr>
+                                    <td class="button">
+                                        <a href="javascript:void(0)" class="btn-primary">Manage order</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                                        industry's standard dummy text ever since the 1500s,
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="product">
+                                        <img src="~/assets/images/product.jpg" />
+                                        <div class="description">
+                                            <h5>lorem ipsum</h5>
+                                            <span>Qty: 1</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- Page CSS Start -->
+    <style>
+        .email-template {
+            font-size: 14px;
+        }
+
+            .email-template .header {
+                background: #269bff;
+                padding: 50px 15px;
+                text-align: center;
+                color: #fff;
+                font-size: 30px;
+            }
+
+            .email-template h3 {
+                font-size: 17px;
+                line-height: 1.4;
+                margin: 0;
+            }
+
+            .email-template .header-text h3 {
+                margin-top: 40px;
+            }
+
+            .email-template td {
+                padding-bottom: 15px;
+            }
+
+            .email-template .button {
+                text-align: center;
+                padding-top: 15px;
+            }
+
+            .email-template .btn-primary {
+                box-sizing: border-box;
+                border-width: 10px 15px;
+                border-radius: 4px;
+                color: #fff;
+                display: inline-block;
+                background-color: #269bff;
+                border-color: #269bff;
+                color: #fff;
+                text-decoration: none;
+                border-style: solid;
+            }
+
+        .email-template-V2 {
+            font-size: 14px;
+        }
+
+            .email-template-V2 h3 {
+                font-size: 17px;
+                line-height: 1.4;
+                margin: 0;
+            }
+
+            .email-template-V2 .header-text h3 {
+                font-size: 20px;
+                margin-top: 40px;
+            }
+
+            .email-template-V2 .btn-primary {
+                box-sizing: border-box;
+                border-width: 10px 15px;
+                border-radius: 4px;
+                color: #fff;
+                display: inline-block;
+                background-color: #269bff;
+                border-color: #269bff;
+                color: #fff;
+                text-decoration: none;
+                border-style: solid;
+            }
+
+            .email-template-V2 .header {
+                background: #269bff;
+                padding: 50px 15px;
+                text-align: center;
+                color: #fff;
+                font-size: 30px;
+            }
+
+            .email-template-V2 td {
+                padding-bottom: 15px;
+                line-height: 1.6;
+            }
+
+            .email-template-V2 .button {
+                padding-top: 15px;
+            }
+
+            .email-template-V2 .product {
+                border-top: 1px dotted #e9e9e9;
+                padding-top: 15px;
+            }
+
+            .email-template-V2 .description {
+                display: inline-block;
+                margin-left: 20px;
+            }
+
+            .email-template-V2 h5 {
+                color: #269bff;
+                margin-bottom: 5px;
+                font-size: 16px;
+            }
+
+            .email-template-V2 .description span {
+                border: 1px solid #e9e9e9;
+                padding: 5px;
+                font-size: 10px;
+            }
+
+            .email-template-V2 .product img {
+                vertical-align: top;
+            }
+
+        @@media (max-width:767px) {
+            table {
+                width: 100% !important;
+            }
+        }
+    </style>
+    <!-- Page CSS End -->
+}
+
+@section Scripts{
+
+}

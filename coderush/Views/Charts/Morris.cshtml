@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewData["Title"] = "Morris";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Morris</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>Line Chart, Pie Chart, Area Chart, Multiline Chart, Bar Chart and Bar Stack Chart</p>
+            </div>
+        </div>
+    </section> <!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Line Chart</h4>
+                    <div class="chart-container">
+                        <div id="lineChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Pie Chart</h4>
+                    <div class="chart-container">
+                        <div id="pieChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Area Chart</h4>
+                    <div class="chart-container">
+                        <div id="areaChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">MultiLine Chart</h4>
+                    <div class="chart-container">
+                        <div id="multilineChart" style="width:100%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bar Chart</h4>
+                    <div class="chart-container">
+                        <div id="barChart" style="width:100%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bar Stack Chart</h4>
+                    <div class="chart-container">
+                        <div id="barStackChart" style="width:100%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/morris/css/morris.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/morris/js/raphael.min.js"></script>
+    <script src="~/assets/vendor/morris/js/morris.min.js"></script>
+    <script src="~/assets/js/demo/morris-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

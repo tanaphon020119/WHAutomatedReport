@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewData["Title"] = "DualList";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Bootstrap Dual Listbox</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>A responsive dual listbox widget optimized for Twitter Bootstrap.</p>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <select multiple="multiple" size="10" id="duallistbox-example">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3" selected="selected">Option 3</option>
+                        <option value="option4">Option 4</option>
+                        <option value="option5">Option 5</option>
+                        <option value="option6" selected="selected">Option 6</option>
+                        <option value="option7">Option 7</option>
+                        <option value="option8">Option 8</option>
+                        <option value="option9">Option 9</option>
+                        <option value="option0">Option 10</option>
+                        <option value="option0">Option 11</option>
+                        <option value="option0">Option 12</option>
+                        <option value="option0">Option 13</option>
+                        <option value="option0">Option 14</option>
+                        <option value="option0">Option 15</option>
+                        <option value="option0">Option 16</option>
+                        <option value="option0">Option 17</option>
+                        <option value="option0">Option 18</option>
+                        <option value="option0">Option 19</option>
+                        <option value="option0">Option 20</option>
+                    </select>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/bootstrap-duallist/css/bootstrap-duallistbox.min.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/bootstrap-duallist/js/jquery.bootstrap-duallistbox.min.js"></script>
+    <script src="~/assets/js/demo/bootstrap-duallist-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

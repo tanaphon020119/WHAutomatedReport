@@ -1,0 +1,253 @@
+﻿
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title mb-4">Orders</h4>
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <div class="dataTables_wrapper">
+                    <table class="table primary-table" id="order-listing" cellspacing="0" width="100%">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th width="12%">Order #</th>
+                                <th width="13%">Customer</th>
+                                <th width="13%">Ship to</th>
+                                <th width="14%">Base Price</th>
+                                <th width="18%">Purchased Price</th>
+                                <th width="10%">Status</th>
+                                <th width="20%">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sorting_1">WD-61</td>
+                                <td>Edinburgh</td>
+                                <td>New York</td>
+                                <td>$1500</td>
+                                <td>$3200</td>
+                                <td>
+                                    <label class="badge badge-info">On hold</label>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-light btn-sm mr-1">
+                                        <i class="mdi mdi-eye text-primary"></i>View
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="mdi mdi-close text-danger"></i>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sorting_1">WD-61</td>
+                                <td>Edinburgh</td>
+                                <td>New York</td>
+                                <td>$1500</td>
+                                <td>$3200</td>
+                                <td>
+                                    <label class="badge badge-info">On hold</label>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-light btn-sm mr-1">
+                                        <i class="mdi mdi-eye text-primary"></i>View
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="mdi mdi-close text-danger"></i>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sorting_1">WD-62</td>
+                                <td>Doe</td>
+                                <td>Brazil</td>
+                                <td>$4500</td>
+                                <td>$7500</td>
+                                <td>
+                                    <label class="badge badge-danger">Pending</label>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-light btn-sm mr-1">
+                                        <i class="mdi mdi-eye text-primary"></i>View
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="mdi mdi-close text-danger"></i>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sorting_1">WD-63</td>
+                                <td>Sam</td>
+                                <td>Tokyo</td>
+                                <td>$2100</td>
+                                <td>$6300</td>
+                                <td>
+                                    <label class="badge badge-success">Closed</label>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-light btn-sm mr-1">
+                                        <i class="mdi mdi-eye text-primary"></i>View
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="mdi mdi-close text-danger"></i>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sorting_1">WD-64</td>
+                                <td>Joe</td>
+                                <td>Netherland</td>
+                                <td>$1100</td>
+                                <td>$7300</td>
+                                <td>
+                                    <label class="badge badge-warning">Open</label>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-light btn-sm mr-1">
+                                        <i class="mdi mdi-eye text-primary"></i>View
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="mdi mdi-close text-danger"></i>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sorting_1">WD-65</td>
+                                <td>Edward</td>
+                                <td>Indonesia</td>
+                                <td>$3600</td>
+                                <td>$4800</td>
+                                <td>
+                                    <label class="badge badge-success">Closed</label>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-light btn-sm mr-1">
+                                        <i class="mdi mdi-eye text-primary"></i>View
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="mdi mdi-close text-danger"></i>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sorting_1">WD-66</td>
+                                <td>Stella</td>
+                                <td>Japan</td>
+                                <td>$5600</td>
+                                <td>$3600</td>
+                                <td>
+                                    <label class="badge badge-info">On hold</label>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-light btn-sm mr-1">
+                                        <i class="mdi mdi-eye text-primary"></i>View
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="mdi mdi-close text-danger"></i>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sorting_1">WD-67</td>
+                                <td>Jaqueline</td>
+                                <td>Germany</td>
+                                <td>$1100</td>
+                                <td>$6300</td>
+                                <td>
+                                    <label class="badge badge-success">Closed</label>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-light btn-sm mr-1">
+                                        <i class="mdi mdi-eye text-primary"></i>View
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="mdi mdi-close text-danger"></i>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sorting_1">WD-68</td>
+                                <td>Tim</td>
+                                <td>Italy</td>
+                                <td>$6300</td>
+                                <td>$2100</td>
+                                <td>
+                                    <label class="badge badge-warning">Open</label>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-light btn-sm mr-1">
+                                        <i class="mdi mdi-eye text-primary"></i>View
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="mdi mdi-close text-danger"></i>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sorting_1">WD-69</td>
+                                <td>John</td>
+                                <td>Tokyo</td>
+                                <td>$2100</td>
+                                <td>$6300</td>
+                                <td>
+                                    <label class="badge badge-success">Closed</label>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-light btn-sm mr-1">
+                                        <i class="mdi mdi-eye text-primary"></i>View
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="mdi mdi-close text-danger"></i>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sorting_1">WD-70</td>
+                                <td>Tom</td>
+                                <td>Germany</td>
+                                <td>$1100</td>
+                                <td>$2300</td>
+                                <td>
+                                    <label class="badge badge-danger">Pending</label>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-light btn-sm mr-1">
+                                        <i class="mdi mdi-eye text-primary"></i>View
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="mdi mdi-close text-danger"></i>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link href="~/assets/vendor/data-table/css/jquery.dataTables.min.css" />
+    <link href="~/assets/vendor/data-table/css/dataTables.bootstrap.min.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/data-table/js/jquery.dataTables.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/assets/js/demo/orders-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

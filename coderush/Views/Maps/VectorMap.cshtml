@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "VectorMap";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Vector Map</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>Vector map shows the graphical area of the customer.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Heading End -->
+    <div class="row">
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Vector Map</h4>
+                    <div id="vmap" style="height: 510px;"></div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/vectorMaps/css/jquery-jvectormap-2.0.3.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/vectorMaps/js/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="~/assets/vendor/vectorMaps/js/jquery-jvectormap-world-mill.js"></script>
+    <script src="~/assets/js/demo/vectormap-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

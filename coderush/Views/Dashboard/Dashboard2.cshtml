@@ -1,0 +1,496 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard2";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <div class="row mb-4">
+        <div class="col-12 d-flex align-items-center justify-content-between">
+            <h4 class="page-title">Dashboard</h4>
+            <div class="d-flex align-items-center">
+                <div class="wrapper mr-4 d-none d-sm-block">
+                    <p class="mb-0">
+                        Summary for
+                        <b class="mb-0">September 2018</b>
+                    </p>
+                </div>
+                <div class="wrapper">
+                    <a href="#" class="btn btn-link d-inline-flex font-weight-bold">
+                        <i class="icon-share-alt mr-1"></i>Export CSV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 card-statistics">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between pb-3">
+                                <h5 class="card-title">Total Visits</h5>
+                                <i class="icon-pie-chart md-18"></i>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span id="sparklinedash" style="display:block"><canvas width="45" height="40"></canvas></span>
+                                <span class="bg-success text-white px-3 py-2 small rounded-border">+10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between pb-3">
+                                <h5 class="card-title">Total Page Views</h5>
+                                <i class="icon-docs md-18"></i>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span id="sparklinedash2"><canvas width="45" height="20"></canvas></span>
+                                <span class="bg-danger text-white px-3 py-2 small rounded-border">+10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between pb-3">
+                                <h5 class="card-title">Unique Visitor</h5>
+                                <i class="icon-wallet md-18"></i>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span id="sparklinedash3"><canvas width="45" height="20"></canvas></span>
+                                <span class="bg-warning text-white px-3 py-2 small rounded-border">+10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between pb-3">
+                                <h5 class="card-title">Bounce Rate</h5>
+                                <i class="icon-screen-desktop md-18"></i>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span id="sparklinedash4"><canvas width="45" height="20"></canvas></span>
+                                <span class="bg-info text-white px-3 py-2 small rounded-border">+10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="pb-4">
+                        <h4 class="card-title mb-0">Site Visits</h4>
+                    </div>
+                    <div id="vmap" style=" height: 510px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-between mb-5">
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1">100k</h5>
+                                <small class="text-muted">Visitors From USA</small>
+                                <div class="progress progress-xs mt-2">
+                                    <div class="progress-bar bg-primary w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                         aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-5">
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1">1M</h5>
+                                <small class="text-muted">Visitors From Europe</small>
+                                <div class="progress progress-xs mt-2">
+                                    <div class="progress-bar bg-warning w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                         aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-5">
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1">450k</h5>
+                                <small class="text-muted">Visitors From Australia</small>
+                                <div class="progress progress-xs mt-2">
+                                    <div class="progress-bar bg-info w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                         aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-5">
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1">1B</h5>
+                                <small class="text-muted">Visitors From India</small>
+                                <div class="progress progress-xs mt-2">
+                                    <div class="progress-bar bg-danger w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                         aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-top text-center">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="easy-pie-chart mb-2" data-size='100' data-percent="75" data-bar-color='#F1635F'>
+                                    <span></span>
+                                </div>
+                                <h6>New Users</h6>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="easy-pie-chart mb-2" data-size='100' data-percent="50" data-bar-color='#269bff'>
+                                    <span></span>
+                                </div>
+                                <h6>New Users</h6>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="easy-pie-chart mb-2" data-size='100' data-percent="60" data-bar-color='#FEBA47'>
+                                    <span></span>
+                                </div>
+                                <h6>New Users</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Monthly Stats</h4>
+                    <div class="chart-container height-auto">
+                        <canvas class="mt-4" id="monthly-stats"></canvas>
+                    </div>
+                    <div class="text-center mt-4">
+                        <div class="d-inline-block mr-4">
+                            <span class="mr-2">10% <i class="fa fa-level-up text-success"></i></span>
+                            <small class="text-muted">APPL</small>
+                        </div>
+                        <div class="d-inline-block mr-4">
+                            <span class="mr-2">2% <i class="fa fa-level-down text-danger"></i></span>
+                            <small class="text-muted">Average</small>
+                        </div>
+                        <div class="d-inline-block mr-4">
+                            <span class="mr-2">15% <i class="fa fa-level-up text-success"></i></span>
+                            <small class="text-muted">Sales</small>
+                        </div>
+                        <div class="d-inline-block">
+                            <span class="mr-2">8% <i class="fa fa-level-down text-danger"></i></span>
+                            <small class="text-muted">Profit</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Todo List</h4>
+                    <ul class="todo-list mt-4">
+                        <li>
+                            <div class="form-check">
+                                <label class="custom-checkbox variation3 mb-0">
+                                    <input class="form-check-input" type="checkbox" checked> Call John for Dinner
+                                    <i class="input-helper"></i>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <label class="custom-checkbox variation3 mb-0">
+                                    <input class="form-check-input" type="checkbox" checked> Book Boss Flight
+                                    <i class="input-helper"></i>
+                                </label>
+                            </div>
+                            <span class="badge badge-info">2 Days</span>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <label class="custom-checkbox variation3 mb-0">
+                                    <input class="form-check-input" type="checkbox" checked> Add meeting in calender
+                                    <i class="input-helper"></i>
+                                </label>
+                            </div>
+                            <span class="badge badge-success">Done</span>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <label class="custom-checkbox variation3 mb-0">
+                                    <input class="form-check-input" type="checkbox" checked> Completed all task
+                                    <i class="input-helper"></i>
+                                </label>
+                            </div>
+                            <span class="badge badge-success">Done</span>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <label class="custom-checkbox variation3 mb-0">
+                                    <input class="form-check-input" type="checkbox"> Hit the Gym
+                                    <i class="input-helper"></i>
+                                </label>
+                            </div>
+                            <span class="badge badge-danger">3 Minutes</span>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <label class="custom-checkbox variation3 mb-0">
+                                    <input class="form-check-input" type="checkbox"> Give Purchase Report
+                                    <i class="input-helper"></i>
+                                </label>
+                            </div>
+                            <span class="badge badge-warning">Not important</span>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <label class="custom-checkbox variation3 mb-0">
+                                    <input class="form-check-input" type="checkbox"> Play Game
+                                    <i class="input-helper"></i>
+                                </label>
+                            </div>
+                            <span class="badge badge-primary">Tomorrow</span>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <label class="custom-checkbox variation3 mb-0">
+                                    <input class="form-check-input" type="checkbox"> Call to client
+                                    <i class="input-helper"></i>
+                                </label>
+                            </div>
+                            <span class="badge badge-warning">Pending</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <h4 class="card-title card-body pb-3">Sales Report</h4>
+                <div class="bg-primary d-flex justify-content-between align-items-center">
+                    <div class="text-white p-4">
+                        <h4>November 2018</h4>
+                        <p>Sales Report</p>
+                    </div>
+                    <div class="text-white p-4">
+                        <h2>$6,000</h2>
+                    </div>
+                </div>
+                <div class="pt-3">
+                    <div class="table-responsive">
+                        <table id="example" class="table" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Item 1</td>
+                                    <td>
+                                        <label class="badge badge-danger">Unavailable</label>
+                                    </td>
+                                    <td>Nov 18</td>
+                                    <td class="text-success">$12</td>
+                                </tr>
+                                <tr>
+                                    <td>Item 2</td>
+                                    <td>
+                                        <label class="badge badge-primary">New</label>
+                                    </td>
+                                    <td>Nov 18</td>
+                                    <td class="text-success">$36</td>
+                                </tr>
+                                <tr>
+                                    <td>Item 3</td>
+                                    <td>
+                                        <label class="badge badge-success">Unavailable</label>
+                                    </td>
+                                    <td>Nov 18</td>
+                                    <td class="text-success">$24</td>
+                                </tr>
+                                <tr>
+                                    <td>Item 4</td>
+                                    <td>
+                                        <label class="badge badge-warning">Used</label>
+                                    </td>
+                                    <td>Nov 18</td>
+                                    <td class="text-success">$18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pb-4 border-top pt-4 text-center">
+                        <a href="javascript:void(0)">
+                            Check all the sales
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <h4 class="card-title card-body pb-3">Popular products</h4>
+                <div class="table-responsive">
+                    <table id="example" class="table" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Price</th>
+                                <th>Views</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Item 1</td>
+                                <td>Nov 18</td>
+                                <td class="text-success">$12</td>
+                                <td class="text-success">4,432</td>
+                            </tr>
+                            <tr>
+                                <td>Item 2</td>
+                                <td>Nov 18</td>
+                                <td class="text-success">$36</td>
+                                <td class="text-info">3,432</td>
+                            </tr>
+                            <tr>
+                                <td>Item 3</td>
+                                <td>Nov 18</td>
+                                <td class="text-success">$24</td>
+                                <td class="text-danger">3,000</td>
+                            </tr>
+                            <tr>
+                                <td>Item 4</td>
+                                <td>Nov 18</td>
+                                <td class="text-success">$18</td>
+                                <td class="text-warning">2,800</td>
+                            </tr>
+                            <tr>
+                                <td>Item 5</td>
+                                <td>Nov 18</td>
+                                <td class="text-success">$18</td>
+                                <td class="text-dark">3,432</td>
+                            </tr>
+                            <tr>
+                                <td>Item 6</td>
+                                <td>Nov 18</td>
+                                <td class="text-success">$18</td>
+                                <td class="text-primary">2,500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pb-4 border-top pt-4 text-center">
+                    <a href="javascript:void(0)">
+                        Check all the products
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img class="img-responsive" alt="user" src="~/assets/images/300_300/manhattan-1280.jpg">
+                <div class="card-body">
+                    <div class="text-muted">
+                        <span class="mr-2">
+                            <i class="icon-calendar md-16"></i>
+                            <span class="ml-2 lh3 d-inline-block align-middle">May 16</span>
+                        </span>
+                        <a class="text-muted ml-2" href="javascript:void(0)">
+                            <i class="fa fa-heart-o md-16"></i>
+                            <span class="ml-2 lh3 d-inline-block align-middle">38</span>
+                        </a>
+                    </div>
+                    <h3 class="mt-4 mb-3">
+                        Top 20 Models are on the ramp
+                    </h3>
+                    <p>Titudin venenatis ipsum ac feugiat. Vestibulum ullamcorper quam.</p>
+                    <a href="javascript:vod(0)" class="btn btn-primary mt-4">Read more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="img-responsive" alt="user" src="~/assets/images/300_300/glasses-1280.jpg">
+                <div class="card-body">
+                    <div class="text-muted">
+                        <span class="mr-2">
+                            <i class="icon-calendar md-16"></i>
+                            <span class="ml-2 lh3 d-inline-block align-middle">Jun 30</span>
+                        </span>
+                        <a class="text-muted ml-2" href="javascript:void(0)">
+                            <i class="fa fa-heart-o md-16"></i>
+                            <span class="ml-2 lh3 d-inline-block align-middle">45</span>
+                        </a>
+                    </div>
+                    <h3 class="mt-4 mb-3">
+                        Top 10 Maniac Checkered
+                    </h3>
+                    <p>Titudin venenatis ipsum ac feugiat. Vestibulum ullamcorper quam.</p>
+                    <a href="javascript:vod(0)" class="btn btn-primary mt-4">Read more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="img-responsive" alt="user" src="~/assets/images/300_300/download-1280.jpg">
+                <div class="card-body">
+                    <div class="text-muted">
+                        <span class="mr-2">
+                            <i class="icon-calendar md-16"></i>
+                            <span class="ml-2 lh3 d-inline-block align-middle">Nov 25</span>
+                        </span>
+                        <a class="text-muted ml-2" href="javascript:void(0)">
+                            <i class="fa fa-heart-o md-16"></i>
+                            <span class="ml-2 lh3 d-inline-block align-middle">50</span>
+                        </a>
+                    </div>
+                    <h3 class="mt-4 mb-3">
+                        Top 50 Products List
+                    </h3>
+                    <p>Titudin venenatis ipsum ac feugiat. Vestibulum ullamcorper quam.</p>
+                    <a href="javascript:vod(0)" class="btn btn-primary mt-4">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/vectorMaps/css/jquery-jvectormap-2.0.3.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/sparkline/js/jquery.sparkline.js"></script>
+    <script src="~/assets/vendor/vectorMaps/js/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="~/assets/vendor/vectorMaps/js/jquery-jvectormap-world-mill.js"></script>
+    <script src="~/assets/vendor/easy-piechart/js/jquery.easypiechart.min.js"></script>
+    <script src="~/assets/vendor/chartjs/js/Chart.bundle.min.js"></script>
+    <script src="~/assets/js/demo/dashboard2-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

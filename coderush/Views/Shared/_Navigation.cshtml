@@ -1,0 +1,374 @@
+﻿<!-- Left Navigation Start -->
+<aside class="main-header">
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-heading">
+                Navigation
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Dashboard")Route">
+                <a class="nav-link has-submenu waves-effect open" title="Dashboard" href="javascript:void(0)">
+                    <i class="mdi mdi-view-dashboard md-18 mr-2"></i>
+                    <span class="menu-title">Dashboard</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Dashboard", action: Pages.Dashboard1.Value)" href="/Dashboard/@Pages.Dashboard1.Value">@Pages.Dashboard1.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Dashboard", action: Pages.Dashboard2.Value)" href="/Dashboard/@Pages.Dashboard2.Value">@Pages.Dashboard2.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Dashboard", action: Pages.Dashboard3.Value)" href="/Dashboard/@Pages.Dashboard3.Value">@Pages.Dashboard3.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Widgets")Route">
+                <a class="nav-link waves-effect" title="Widgets" href="/Widgets/@Pages.Widgets.Value">
+                    <i class="mdi mdi-settings-box md-18 mr-2"></i>
+                    <span class="menu-title">@Pages.Widgets.Value</span>
+                </a>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Mailbox")Route">
+                <a class="nav-link has-submenu waves-effect" title="Mailbox" href="javascript:void(0)">
+                    <i class="mdi mdi-email md-18 mr-2"></i>
+                    <span class="menu-title">MailBox</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Mailbox", action: Pages.Inbox.Value)" href="/Mailbox/@Pages.Inbox.Value">@Pages.Inbox.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Mailbox", action: Pages.Compose.Value)" href="/Mailbox/@Pages.Compose.Value">@Pages.Compose.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Mailbox", action: Pages.Template.Value)" href="/Mailbox/@Pages.Template.Value">@Pages.Template.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-heading">
+                Components
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Elements")Route">
+                <a class="nav-link has-submenu waves-effect" title="Elements" href="javascript:void(0)">
+                    <i class="mdi mdi-cube-outline md-18 mr-2"></i>
+                    <span class="menu-title">Elements</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.Accordians.Value)" href="/Elements/@Pages.Accordians.Value">@Pages.Accordians.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.Buttons.Value)" href="/Elements/@Pages.Buttons.Value">@Pages.Buttons.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.Badges.Value)" href="/Elements/@Pages.Badges.Value">@Pages.Badges.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.Pagination.Value)" href="/Elements/@Pages.Pagination.Value">@Pages.Pagination.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.Cards.Value)" href="/Elements/@Pages.Cards.Value">@Pages.Cards.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.Dropdowns.Value)" href="/Elements/@Pages.Dropdowns.Value">@Pages.Dropdowns.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.Modal.Value)" href="/Elements/@Pages.Modal.Value">@Pages.Modal.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.ProgressBar.Value)" href="/Elements/@Pages.ProgressBar.Value">@Pages.ProgressBar.Value</a>
+                        </li>
+                        <li class="nav-item @Html.IsSelected(controller: "Elements", action: Pages.BootstrapTabs.Value)Route @Html.IsSelected(controller: "Elements", action: Pages.LineTabs.Value)Route">
+                            <a class="nav-link has-submenu" href="javascript:void(0)">
+                                Tabs
+                            </a>
+                            <div class="sub-menu level2">
+                                <ul>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.BootstrapTabs.Value)" href="/Elements/@Pages.BootstrapTabs.Value">@Pages.BootstrapTabs.Value</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.LineTabs.Value)" href="/Elements/@Pages.LineTabs.Value">@Pages.LineTabs.Value</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.Typography.Value)" href="/Elements/@Pages.Typography.Value">@Pages.Typography.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.Tooltips.Value)" href="/Elements/@Pages.Tooltips.Value">@Pages.Tooltips.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.Notifications.Value)" href="/Elements/@Pages.Notifications.Value">@Pages.Notifications.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Elements", action: Pages.Thumbnails.Value)" href="/Elements/@Pages.Thumbnails.Value">@Pages.Thumbnails.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Miscellaneous")Route">
+                <a class="nav-link has-submenu waves-effect" title="Miscellaneous" href="javascript:void(0)">
+                    <i class="mdi mdi-flask md-18 mr-2"></i>
+                    <span class="menu-title">Miscellaneous</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Miscellaneous", action: Pages.Dragula.Value)" href="/Miscellaneous/@Pages.Dragula.Value">@Pages.Dragula.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Miscellaneous", action: Pages.Clipboard.Value)" href="/Miscellaneous/@Pages.Clipboard.Value">@Pages.Clipboard.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Miscellaneous", action: Pages.ContextMenu.Value)" href="/Miscellaneous/@Pages.ContextMenu.Value">@Pages.ContextMenu.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Miscellaneous", action: Pages.Sliders.Value)" href="/Miscellaneous/@Pages.Sliders.Value">@Pages.Sliders.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Miscellaneous", action: Pages.Carousel.Value)" href="/Miscellaneous/@Pages.Carousel.Value">@Pages.Carousel.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Miscellaneous", action: Pages.Loaders.Value)" href="/Miscellaneous/@Pages.Loaders.Value">@Pages.Loaders.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Forms")Route">
+                <a class="nav-link has-submenu waves-effect" title="Forms" href="javascript:void(0)">
+                    <i class="mdi mdi-table-edit md-18 mr-2"></i>
+                    <span class="menu-title">Forms</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Forms", action: Pages.Layouts.Value)" href="/Forms/@Pages.Layouts.Value">@Pages.Layouts.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Forms", action: Pages.Controls.Value)" href="/Forms/@Pages.Controls.Value">@Pages.Controls.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Forms", action: Pages.Selects.Value)" href="/Forms/@Pages.Selects.Value">@Pages.Selects.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Forms", action: Pages.Pickers.Value)" href="/Forms/@Pages.Pickers.Value">@Pages.Pickers.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Forms", action: Pages.Editors.Value)" href="/Forms/@Pages.Editors.Value">@Pages.Editors.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Forms", action: Pages.FileUpload.Value)" href="/Forms/@Pages.FileUpload.Value">@Pages.FileUpload.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Forms", action: Pages.Validation.Value)" href="/Forms/@Pages.Validation.Value">@Pages.Validation.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Forms", action: Pages.Wizard.Value)" href="/Forms/@Pages.Wizard.Value">@Pages.Wizard.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Forms", action: Pages.DualList.Value)" href="/Forms/@Pages.DualList.Value">@Pages.DualList.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Charts")Route">
+                <a class="nav-link has-submenu waves-effect" title="Charts" href="javascript:void(0)">
+                    <i class="mdi mdi-cube-outline md-18 mr-2"></i>
+                    <span class="menu-title">Charts</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Charts", action: Pages.C3.Value)" href="/Charts/@Pages.C3.Value">@Pages.C3.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Charts", action: Pages.Chartist.Value)" href="/Charts/@Pages.Chartist.Value">@Pages.Chartist.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Charts", action: Pages.ChartJS.Value)" href="/Charts/@Pages.ChartJS.Value">@Pages.ChartJS.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Charts", action: Pages.Dygraph.Value)" href="/Charts/@Pages.Dygraph.Value">@Pages.Dygraph.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Charts", action: Pages.FlotChart.Value)" href="/Charts/@Pages.FlotChart.Value">@Pages.FlotChart.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Charts", action: Pages.Morris.Value)" href="/Charts/@Pages.Morris.Value">@Pages.Morris.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Charts", action: Pages.Plottable.Value)" href="/Charts/@Pages.Plottable.Value">@Pages.Plottable.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Tables")Route">
+                <a class="nav-link has-submenu waves-effect" title="Tables" href="javascript:void(0)">
+                    <i class="mdi mdi-table md-18 mr-2"></i>
+                    <span class="menu-title">Tables</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Tables", action: Pages.BasicTable.Value)" href="/Tables/@Pages.BasicTable.Value">@Pages.BasicTable.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Tables", action: Pages.DataTable.Value)" href="/Tables/@Pages.DataTable.Value">@Pages.DataTable.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Maps")Route">
+                <a class="nav-link has-submenu waves-effect" title="Maps" href="javascript:void(0)">
+                    <i class="mdi mdi-map-marker md-18 mr-2"></i>
+                    <span class="menu-title">Maps</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li>
+                            <a class="nav-link @Html.IsSelected(controller: "Maps", action: Pages.VectorMap.Value)" href="/Maps/@Pages.VectorMap.Value">
+                                @Pages.VectorMap.Value
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link @Html.IsSelected(controller: "Maps", action: Pages.GoogleMap.Value)" href="/Maps/@Pages.GoogleMap.Value">
+                                @Pages.GoogleMap.Value
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Icons")Route">
+                <a class="nav-link has-submenu waves-effect" title="Maps" href="javascript:void(0)">
+                    <i class="mdi mdi-information-variant md-18 mr-2"></i>
+                    <span class="menu-title">Icons</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li>
+                            <a class="nav-link @Html.IsSelected(controller: "Icons", action: Pages.MaterialIcon.Value)" href="/Icons/@Pages.MaterialIcon.Value">
+                                @Pages.MaterialIcon.Value
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link @Html.IsSelected(controller: "Icons", action: Pages.FontAwesomeIcon.Value)" href="/Icons/@Pages.FontAwesomeIcon.Value">
+                                @Pages.FontAwesomeIcon.Value
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link @Html.IsSelected(controller: "Icons", action: Pages.SimpleIcon.Value)" href="/Icons/@Pages.SimpleIcon.Value">
+                                @Pages.SimpleIcon.Value
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-heading">
+                More
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "App")Route">
+                <a class="nav-link has-submenu waves-effect" title="App" href="javascript:void(0)">
+                    <i class="mdi mdi-file-document md-18 mr-2"></i>
+                    <span class="menu-title">App</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "App", action: Pages.MemberProfile.Value)" href="/App/@Pages.MemberProfile.Value">@Pages.MemberProfile.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "App", action: Pages.NewsGrid.Value)" href="/App/@Pages.NewsGrid.Value">@Pages.NewsGrid.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "App", action: Pages.FAQ.Value)" href="/App/@Pages.FAQ.Value">@Pages.FAQ.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "App", action: Pages.FAQ2.Value)" href="/App/@Pages.FAQ2.Value">@Pages.FAQ2.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "App", action: Pages.Timeline.Value)" href="/App/@Pages.Timeline.Value">@Pages.Timeline.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "App", action: Pages.Portfolio.Value)" href="/App/@Pages.Portfolio.Value">@Pages.Portfolio.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Ecommerce")Route">
+                <a class="nav-link has-submenu waves-effect" title="Ecommerce" href="javascript:void(0)">
+                    <i class="mdi mdi-cart md-18 mr-2"></i>
+                    <span class="menu-title">Ecommerce</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Ecommerce", action: Pages.Orders.Value)" href="/Ecommerce/@Pages.Orders.Value">@Pages.Orders.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Ecommerce", action: Pages.Invoice.Value)" href="/Ecommerce/@Pages.Invoice.Value">@Pages.Invoice.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Ecommerce", action: Pages.PricingTable.Value)" href="/Ecommerce/@Pages.PricingTable.Value">@Pages.PricingTable.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Auth")Route">
+                <a class="nav-link has-submenu waves-effect" title="Auth" href="javascript:void(0)">
+                    <i class="mdi mdi-key md-18 mr-2"></i>
+                    <span class="menu-title">Auth</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a target="_blank" class="nav-link @Html.IsSelected(controller: "Auth", action: Pages.Login.Value)" href="/Auth/@Pages.Login.Value">@Pages.Login.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" class="nav-link @Html.IsSelected(controller: "Auth", action: Pages.Login2.Value)" href="/Auth/@Pages.Login2.Value">@Pages.Login2.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" class="nav-link @Html.IsSelected(controller: "Auth", action: Pages.Login3.Value)" href="/Auth/@Pages.Login3.Value">@Pages.Login3.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" class="nav-link @Html.IsSelected(controller: "Auth", action: Pages.Register.Value)" href="/Auth/@Pages.Register.Value">@Pages.Register.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" class="nav-link @Html.IsSelected(controller: "Auth", action: Pages.Register2.Value)" href="/Auth/@Pages.Register2.Value">@Pages.Register2.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" class="nav-link @Html.IsSelected(controller: "Auth", action: Pages.Register3.Value)" href="/Auth/@Pages.Register3.Value">@Pages.Register3.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Maintenance")Route">
+                <a class="nav-link has-submenu waves-effect" title="Maintenance" href="javascript:void(0)">
+                    <i class="mdi mdi-road md-18 mr-2"></i>
+                    <span class="menu-title">Maintenance</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a target="_blank" class="nav-link @Html.IsSelected(controller: "Maintenance", action: Pages.LockScreen.Value)" href="/Maintenance/@Pages.LockScreen.Value">@Pages.LockScreen.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" class="nav-link @Html.IsSelected(controller: "Maintenance", action: Pages.Page404.Value)" href="/Maintenance/@Pages.Page404.Value">@Pages.Page404.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" class="nav-link @Html.IsSelected(controller: "Maintenance", action: Pages.Page500.Value)" href="/Maintenance/@Pages.Page500.Value">@Pages.Page500.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>           
+            
+        </ul>
+    </nav>
+</aside>
+<!-- Left Navigation End -->

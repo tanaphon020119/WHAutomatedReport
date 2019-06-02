@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewData["Title"] = "ChartJS";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Chart JS</h1>
+        <div class="breadcrumb-container">
+            <div class="row">
+                <div class="col-12 col-xs-12 col-sm-12 col-md-9 col-md-10 col-xl-11">
+                    <div class="titles">
+                        <p>Line Chart, Bar Chart, Multi Chart, Doughnut Chart, Pie Chart, Polar Chart and Radar Chart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bar Chart</h4>
+                    <div class="chart-container">
+                        <canvas id="barChart" height="150" width="150"></canvas>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Line Chart</h4>
+                    <div class="chart-container">
+                        <canvas id="lineChart" height="150" width="150"></canvas>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Multi Chart</h4>
+                    <div class="chart-container">
+                        <canvas id="multiChart" height="150" width="150"></canvas>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Pie Chart</h4>
+                    <div class="chart-container doughnut">
+                        <canvas id="pieChart" height="250" width="250"></canvas>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Doughnut Chart</h4>
+                    <div class="chart-container doughnut">
+                        <canvas id="doughnutChart" height="250" width="250"></canvas>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Polar Chart</h4>
+                    <div class="chart-container">
+                        <canvas id="polarChart" height="150" width="150"></canvas>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Radar Chart</h4>
+                    <div class="chart-container">
+                        <canvas id="radarChart" height="150" width="150"></canvas>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/chartjs/js/Chart.bundle.min.js"></script>
+    <script src="~/assets/js/demo/chartjs-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewData["Title"] = "ContextMenu";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Context Menu</h1>
+        <div class="titles">
+            <p>A menu in a graphical user interface (GUI) that appears upon user interaction, such as a right-click.</p>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Simple</h4>
+                    <div class="card card-inverse-info" id="context-menu-simple">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Right click somewhere in this colored area for simple context menu
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Access Keys</h4>
+                    <div class="card card-inverse-success" id="context-menu-access">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Right click in this colored area for context menu with action
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Context menu that keeps opened</h4>
+                    <div class="card card-inverse-warning" id="context-menu-open">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Right click somewhere in this colored area for context menu that keeps opened
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Multi-Level Menu</h4>
+                    <div class="card card-inverse-danger" id="context-menu-multi">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Right click somewhere in this colored area for context menu with multiple levels (sub menu)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Menu On Hover</h4>
+                    <div class="card card-inverse-success" id="context-menu-hover">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Hover this colored area for context menu
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Menu On Hover With Auto-Hide</h4>
+                    <div class="card card-inverse-primary" id="context-menu-hover-autohide">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Hover here for context menu and mouse out for hiding
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/contextmenu/css/jquery.contextMenu.min.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/contextmenu/js/jquery.contextMenu.min.js"></script>
+    <script src="~/assets/vendor/contextmenu/js/jquery.ui.position.js"></script>
+    <script src='~/assets/js/demo/context-menu-demo.js'></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

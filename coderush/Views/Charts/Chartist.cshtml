@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewData["Title"] = "Chartist";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Chartlist</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>Bar Chart, Line Chart, Holes in Chart, Pie Chart, Doughnut Chart and Multi Axes Chart</p>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bar Chart</h4>
+                    <div class="chart-container">
+                        <div id="barChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Line Chart</h4>
+                    <div class="chart-container">
+                        <div id="lineChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Holes in Chart</h4>
+                    <div class="chartist-tooltip"></div>
+                    <div class="chart-container">
+                        <div id="holeChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Pie Chart</h4>
+                    <div class="chart-container">
+                        <div id="pieChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Doughnut Chart</h4>
+                    <div class="chart-container">
+                        <div id="donghnutChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Multi Axes Chart</h4>
+                    <div class="chart-container">
+                        <div id="gaugeChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/chartlist/css/chartist.min.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/chartlist/js/chartist.min.js"></script>
+    <script src="~/assets/vendor/chartlist/js/chartist-plugin-tooltip.min.js"></script>
+    <script src="~/assets/js/demo/chartist-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

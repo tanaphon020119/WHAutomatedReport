@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewData["Title"] = "Editors";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Editors</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>A text editor enabling the user to enter or alter text/HTML.</p>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bootstrap Markdown</h4>
+                    <textarea id="bs-markdown" class="form-control" rows="10">
+### Hello there
+How are you?
+
+I have bellow task for you :
+
+Select from this text...
+Click the bold on THIS WORD and make THESE ONE italic
+Link GOOGLE to google.com
+Test to insert image (and try to tab after write the image description)
+Test Preview
+And ending here... Click "List"
+
+Enjoy!
+</textarea>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Quill</h4>
+                    <div id="editor"></div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Simple MDE markdown</h4>
+                    <textarea id="simpleMde"></textarea>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/markdown/css/bootstrap-markdown.min.css" />
+    <link rel="stylesheet" href="~/assets/vendor/quill/css/quill.snow.css">
+    <link rel="stylesheet" href="~/assets/vendor/simpleMde/css/simplemde.min.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/markdown/js/markdown.js"></script>
+    <script src="~/assets/vendor/markdown/js/bootstrap-markdown.js"></script>
+    <script src="~/assets/vendor/quill/js/quill.min.js"></script>
+    <script src="~/assets/vendor/simpleMde/js/simplemde.min.js"></script>
+    <script src="~/assets/js/demo/editors-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

@@ -1,0 +1,228 @@
+﻿
+@{
+    ViewData["Title"] = "Sliders";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Sliders</h1>
+        <div class="titles">
+            <p>A numeric value which must between min and max defined by person.</p>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Horizontal Slider</h4>
+                    <div id="ul-slider-1" class="slider-primary m-xl-b"></div>
+                    <div id="ul-slider-2" class="slider-danger m-xl-b"></div>
+                    <div id="ul-slider-3" class="slider-warning m-xl-b"></div>
+                    <div id="ul-slider-4" class="slider-success m-xl-b"></div>
+                    <div id="ul-slider-5" class="slider-info m-xl-b"></div>
+                    <div id="ul-slider-6" class="slider-dark m-xl-b"></div>
+                    <div id="ul-slider-7" class="slider-light m-xl-b"></div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Values Range</h4>
+                    <div id="value-range" class="slider-primary"></div>
+                    <p class="mt-3 m-xl-b">
+                        Value:
+                        <span id="huge-value">2</span>
+                    </p>
+                    <div id="skipstep" class="slider-danger"></div>
+                    <div class="d-flex justify-content-between ">
+                        <p class="mt-3">
+                            Value:
+                            <span id="skip-value-lower">20.00</span>
+                        </p>
+                        <p class="mt-3">
+                            Value:
+                            <span id="skip-value-upper">90.00</span>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Connected Handles</h4>
+                    <div id="skipstep-connect" class="slider-primary"></div>
+                    <div class="d-flex justify-content-between m-xl-b">
+                        <p class="mt-3">
+                            Value:
+                            <span id="skip-value-lower-2">20.00</span>
+                        </p>
+                        <p class="mt-3">
+                            Value:
+                            <span id="skip-value-upper-2">90.00</span>
+                        </p>
+                    </div>
+                    <div id="skipstep-connect1" class="slider-danger"></div>
+                    <div class="d-flex justify-content-between m-xl-b">
+                        <p class="mt-3">
+                            Value:
+                            <span id="skip-value-lower-2">20.00</span>
+                        </p>
+                        <p class="mt-3">
+                            Value:
+                            <span id="skip-value-upper-2">90.00</span>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body mb-5">
+                    <h4 class="card-title mb-4">Slider With Tooltip</h4>
+                    <div class="mt-5 mb-5 pt-4">
+                        <div id="soft-limit" class="slider-primary"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body mb-5">
+                    <h4 class="card-title mb-4">Slider Variation</h4>
+                    <div class="py-5">
+                        <div class="mb-5 pt-4">
+                            <div id="soft-limit1" class="slider-success"></div>
+                        </div>
+                    </div>
+                    <div class="py-5">
+                        <div class="pt-4">
+                            <div id="soft-limit2" class="slider-danger"></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Ion Range Silders</h4>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_01" name="range_01" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Set min value, max value and start point</p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_02" name="range_02" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">
+                            Set type to double and specify range, also showing grid and adding
+                            prefix
+                        </p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_03" name="range_03" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Connecting from and two values</p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_04" name="range_04" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Disable visual details</p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_05" name="range_05" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Disable part of visual details</p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_06" name="range_06" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_07" name="range_07" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Using prefixes</p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_08" name="range_08" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Using postfix</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Ion Range Silders</h4>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_09" name="range_09" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Using grid_num:</p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_10" name="range_10" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Predifined step? You can snap grid to it: </p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_11" name="range_11" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Even if you have a very strange step!</p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_12" name="range_12" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Lock handle</p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_13" name="range_13" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Limit movement</p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_14" name="range_14" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_15" name="range_15" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p>Advanced limit example</p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_16" name="range_16" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p>Advanced limit example</p>
+                    </div>
+                    <div class="ion-slider-wrap mb-4">
+                        <input type="text" id="range_17" name="range_17" className="irs-hidden-input mb-4" tabindex="-1"
+                               readonly="">
+                        <p class="page-description">Disable slider</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/noUISlider/css/nouislider.min.css" />
+    <link rel="stylesheet" href="~/assets/vendor/ion-rangeslider/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="~/assets/vendor/ion-rangeslider/css/ion.rangeSlider.skinFlat.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script src="~/assets/vendor/noUISlider/js/nouislider.min.js"></script>
+    <script src="~/assets/js/demo/sliders-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

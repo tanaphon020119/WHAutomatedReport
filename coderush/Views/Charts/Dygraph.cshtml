@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewData["Title"] = "Dygraph";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Dygraph</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>Independent Series Chart, Stock Chart, Per Series Chart and Function Chart</p>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Independent Series Chart</h4>
+                    <div class="chart-container">
+                        <div id="independentSeries"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Stock Chart</h4>
+                    <div class="chart-container">
+                        <div id="stockChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Per Series Chart</h4>
+                    <div class="chart-container">
+                        <div id="perSeries"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Function Chart</h4>
+                    <div class="chart-container">
+                        <div id="plotter" style="width:100%"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/dygraph/css/dygraph.min.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/dygraph/js/dygraph.min.js"></script>
+    <script src="~/assets/js/demo/dygraph-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

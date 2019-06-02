@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewData["Title"] = "FlotChart";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Flot Chart</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>Bar Chart, Line Chart, Multi Chart, Pie Chart, Live Chart and Multi Axes chart</p>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bar Chart</h4>
+                    <div class="chart-container">
+                        <div id="barChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Line Chart</h4>
+                    <div class="chart-container">
+                        <div id="lineChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Multi Chart</h4>
+                    <div class="chart-container">
+                        <div id="multiChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Pie Chart</h4>
+                    <div class="chart-container">
+                        <div id="pieChart" height="150" width="150"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Live Chart</h4>
+                    <div class="chart-container">
+                        <div id="liveChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Multi Axes Chart</h4>
+                    <div class="chart-container">
+                        <div id="multiAxesChart"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/flow-chart/js/jquery.flot.js"></script>
+    <script src="~/assets/vendor/flow-chart/js/jquery.flot.pie.js"></script>
+    <script src="~/assets/vendor/flow-chart/js/jquery.flot.time.js"></script>
+    <script src="~/assets/vendor/flow-chart/js/jquery.flot.tooltip.js"></script>
+    <script src="~/assets/vendor/flow-chart/js/jquery.flot.resize.js"></script>
+    <script src="~/assets/js/demo/flow-chart-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

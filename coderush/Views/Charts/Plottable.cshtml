@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewData["Title"] = "Plottable";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Plottable</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>
+                    Line Chart, Area Chart, Bar Chart, Bar Stack Chart, Pie Chart, Scattered Chart, Segment Chart and
+                    Rectangle
+                    chart
+                </p>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Line Chart</h4>
+                    <div class="chart-container">
+                        <svg id="lineChart"></svg>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Area Chart</h4>
+                    <div class="chart-container">
+                        <svg id="areaChart"></svg>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bar Chart</h4>
+                    <div class="chart-container">
+                        <svg id="barChart"></svg>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bar Stack Chart</h4>
+                    <div class="chart-container">
+                        <svg id="barStackChart"></svg>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Pie Chart</h4>
+                    <div class="chart-container">
+                        <svg id="pieChart"></svg>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Scattered Chart</h4>
+                    <div class="chart-container">
+                        <svg id="scatterChart"></svg>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Segment Chart</h4>
+                    <div class="chart-container">
+                        <svg id="segmentChart"></svg>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Rectangle Chart</h4>
+                    <div class="chart-container">
+                        <svg id="rectangleChart"></svg>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/plottable/css/plottable.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/d3/js/d3.min.js"></script>
+    <script src="~/assets/vendor/plottable/js/plottable.min.js"></script>
+    <script src="~/assets/js/demo/plotabble-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

@@ -1,0 +1,675 @@
+﻿
+@{
+    ViewData["Title"] = "Layouts";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Basic Forms</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>A form displays a set of related user input fields in a structured way</p>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Material Form Layout</h4>
+                    <form class="form-material non-static">
+                        <fieldset class="form-group">
+                            <input id="first_name" class="form-control" type="text">
+                            <label for="first_name">First Name</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input id="email" class="form-control" type="email">
+                            <label for="email">Email</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input id="password" class="form-control" type="password">
+                            <label for="password">Password</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input id="predefined" class="form-control focused" type="text" value="Predefined value">
+                            <label for="predefined">Predefined Value</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input id="disabled" class="form-control" type="text" disabled>
+                            <label for="disabled">Disabled</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input id="max" class="form-control" type="text" maxlength="8">
+                            <label for="max">Max Length 8 Char</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input id="min" class="form-control" type="text" minlength="6">
+                            <label for="min">Min Length 6 Char</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <textarea id="textarea" class="form-control"></textarea>
+                            <label for="textarea">Textarea</label>
+                            <span></span>
+                        </fieldset>
+                        <button type="submit" class="btn btn-success mr-2">
+                            Submit
+                        </button>
+                        <button type="submit" class="btn btn-light">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Material Form Static Labels</h4>
+                    <form class="form-material">
+                        <fieldset class="form-group static-label">
+                            <input id="s_first_name" class="form-control" placeholder="First Name" type="text">
+                            <label for="s_first_name">First Name</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group static-label">
+                            <input id="s_email" class="form-control" placeholder="Email" type="email">
+                            <label for="s_email">Email</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group static-label">
+                            <input id="s_password" class="form-control" placeholder="Password" type="password">
+                            <label for="s_password">Password</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group static-label">
+                            <input id="s_predefined" class="form-control" type="text" value="Predefined value">
+                            <label for="s_predefined">Predefined Value</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group static-label">
+                            <input id="s_disabled" class="form-control" placeholder="Disabled Input" type="text" disabled>
+                            <label for="s_disabled">Disabled</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group static-label">
+                            <input id="s_max" class="form-control" placeholder="Max length is 8" type="text" maxlength="8">
+                            <label for="s_max">Max Length 8 Char</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group static-label">
+                            <input id="s_min" class="form-control" type="text" placeholder="Min length is 6" minlength="6">
+                            <label for="s_min">Min Length 6 Char</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="form-group static-label">
+                            <textarea id="s_textarea" class="form-control" placeholder="Enter your large text"></textarea>
+                            <label for="s_textarea">Textarea</label>
+                            <span></span>
+                        </fieldset>
+                        <button type="submit" class="btn btn-success mr-2">
+                            Submit
+                        </button>
+                        <button type="submit" class="btn btn-light">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Default Bootstrap Form</h4>
+                    <form>
+                        <fieldset class="form-group">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" placeholder="Email">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" placeholder="Password">
+                        </fieldset>
+                        <button type="submit" class="btn btn-success mr-2">
+                            Submit
+                        </button>
+                        <button type="submit" class="btn btn-light">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">No Border Radius</h4>
+                    <form class="no-brd-radius">
+                        <fieldset class="form-group">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" placeholder="Email">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" placeholder="Password">
+                        </fieldset>
+                        <button type="submit" class="btn btn-success mr-2">
+                            Submit
+                        </button>
+                        <button type="submit" class="btn btn-light">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Basic Form</h4>
+                    <form>
+                        <fieldset class="form-group">
+                            <label for="exampleInputName1">Name</label>
+                            <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="exampleInputPassword4">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>File upload</label>
+                            <input type="file" name="img[]" class="file-upload-default">
+                            <div class="input-group col-xs-12">
+                                <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                <span class="input-group-append">
+                                    <button class="file-upload-browse btn btn-info" type="button">Upload</button>
+                                </span>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="exampleInputCity1">City</label>
+                            <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="exampleTextarea1">Textarea</label>
+                            <textarea class="form-control" id="exampleTextarea1" rows="2"></textarea>
+                        </fieldset>
+                        <button type="submit" class="btn btn-success mr-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Form Row</h4>
+                    <form>
+                        <div class="form-row">
+                            <fieldset class="form-group col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="Email">
+                            </fieldset>
+                            <fieldset class="form-group col-md-6">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" placeholder="Password">
+                            </fieldset>
+                        </div>
+                        <fieldset class="form-group">
+                            <label class="form-label">Address</label>
+                            <input type="text" class="form-control" placeholder="1234 Main St">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label class="form-label">Address 2</label>
+                            <input type="text" class="form-control" placeholder="Apartment, studio, or floor">
+                        </fieldset>
+                        <div class="form-row">
+                            <fieldset class="form-group col-md-6">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control">
+                            </fieldset>
+                            <fieldset class="form-group col-md-4">
+                                <label class="form-label">State</label>
+                                <select class="custom-select">
+                                    <option>Select state</option>
+                                    <option>Mumbai</option>
+                                    <option>New Delhi</option>
+                                    <option>Haryana</option>
+                                    <option>Punjab</option>
+                                    <option>Rajasthan</option>
+                                    <option>Gujrat</option>
+                                </select>
+                            </fieldset>
+                            <fieldset class="form-group col-md-2">
+                                <label class="form-label">Zip</label>
+                                <input type="text" class="form-control">
+                            </fieldset>
+                        </div>
+                        <fieldset class="form-group">
+                            <input id="checkme1" type="checkbox" class="mr-2">
+                            <label for="checkme1"> Check this checkbox</label>
+                        </fieldset>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Form with horizontal labels</h4>
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-2 text-sm-right">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-2 text-sm-right">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-2 text-sm-right">Textarea</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" placeholder="Textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-2 text-sm-right pt-sm-0">Checkbox</label>
+                            <div class="col-sm-10">
+                                <input class="mr-2" id="checkme2" type="checkbox">
+                                <label for="checkme2"> Check this checkbox</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10 ml-sm-auto">
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Form states</h4>
+                    <form>
+                        <fieldset class="form-group">
+                            <label class="form-label">Valid</label>
+                            <input type="text" class="form-control is-valid">
+                            <small class="valid-feedback">
+                                A block of help text that breaks onto a new line and may extend
+                                beyond one
+                                line.
+                            </small>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label class="form-label">Invalid</label>
+                            <input type="text" class="form-control is-invalid">
+                            <small class="invalid-feedback">
+                                A block of help text that breaks onto a new line and may extend
+                                beyond one
+                                line.
+                            </small>
+                        </fieldset>
+                        <fieldset class="form-group position-relative">
+                            <label class="form-label">Invalid with tooltip</label>
+                            <input type="text" class="form-control is-invalid">
+                            <div class="invalid-tooltip">Please provide a valid state.</div>
+                        </fieldset>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Form states variations</h4>
+                    <form>
+                        <div class="form-group row has-success">
+                            <label for="inputHorizontalSuccess" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputHorizontalSuccess" placeholder="name@example.com">
+                                <div class="form-control-feedback">Success! You've done it.</div>
+                            </div>
+                        </div>
+                        <div class="form-group row has-warning">
+                            <label for="inputHorizontalWarning" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputHorizontalWarning" placeholder="name@example.com">
+                                <div class="form-control-feedback">Shucks, check the formatting of that and try again.</div>
+                            </div>
+                        </div>
+                        <div class="form-group row has-danger">
+                            <label for="inputHorizontalDnger" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control " id="inputHorizontalDnger" placeholder="name@example.com">
+                                <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Basic Input Groups</h4>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@@</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                            </div>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">0.00</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-lg-6">
+            <article class="card mb-4">
+                <div class="card-body no-brd-radius">
+                    <h4 class="card-title mb-4">Color Input Groups</h4>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend bg-info">
+                                <span class="input-group-text border-info">
+                                    <i class="mdi mdi-shield-outline text-white"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend bg-primary">
+                                <span class="input-group-text border-primary">
+                                    <i class="mdi mdi mdi-menu text-white"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                            <div class="input-group-append bg-primary">
+                                <span class="input-group-text border-primary">
+                                    <i class="mdi mdi-menu text-white"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend bg-primary">
+                                <span class="input-group-text border-primary text-white">$</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <div class="input-group-append bg-primary">
+                                <span class="input-group-text border-primary text-white">.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Inline Form</h4>
+                    <form class="form-inline mb-4">
+                        <label class="sr-only">Name</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2 mb-sm-0" placeholder="Jane Doe">
+                        <label class="sr-only">Username</label>
+                        <div class="input-group mr-sm-2 mb-2 mb-sm-0">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@@</div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username">
+                        </div>
+                        <label class="form-check mr-sm-2 mb-2 mb-sm-0">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label">
+                                Remember me
+                            </div>
+                        </label>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <form class="form-inline">
+                        <label class="form-label mr-sm-2">Preference</label>
+                        <select class="custom-select mr-sm-2 mb-2 mb-sm-0">
+                            <option selected="">Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <label class="mr-sm-2 mb-2 mb-sm-0">
+                            <input type="checkbox">
+                            <span>Remember my preference</span>
+                        </label>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Help Text</h4>
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control">
+                            <small class="form-text text-muted">
+                                Your password must be 8-20 characters long, contain letters and numbers, and must not contain
+                                spaces,
+                                special characters,
+                                or emoji.
+                            </small>
+                        </div>
+                    </form>
+                    <form class="form-inline mt-4">
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control mx-sm-3">
+                            <small class="text-muted">
+                                Must be 8-20 characters long.
+                            </small>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Controls</h4>
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-2 text-sm-right">Email</label>
+                            <div class="col-sm-10">
+                                <div class="form-control-plaintext">example.email.com</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-2 text-sm-right">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10 ml-sm-auto">
+                                <button type="submit" class="btn btn-default">Confirm identity</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-label mr-2">example.email.com</div>
+                        <input type="password" class="form-control mr-2 mbr-xl-2" placeholder="Password">
+                        <button type="submit" class="btn btn-default">Confirm identity</button>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Server side</h4>
+                    <form>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationServer01">First name</label>
+                                <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name"
+                                       value="Mark" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationServer02">Last name</label>
+                                <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name"
+                                       value="Otto" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationServerUsername">Username</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPrepend3">@@</span>
+                                    </div>
+                                    <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Username"
+                                           aria-describedby="inputGroupPrepend3" required>
+                                    <div class="invalid-feedback">
+                                        Please choose a username.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationServer03">City</label>
+                                <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City"
+                                       required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationServer04">State</label>
+                                <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State"
+                                       required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid state.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationServer05">Zip</label>
+                                <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip"
+                                       required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid zip.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+                                <label class="form-check-label" for="invalidCheck3">
+                                    Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Form Sizes</h4>
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label form-label-lg">Large label</label>
+                            <input type="text" class="form-control form-control-lg" placeholder="Large input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label form-label-sm">Small label</label>
+                            <input type="text" class="form-control form-control-sm" placeholder="Small input">
+                        </div>
+                    </form>
+                    <form class="mt-4">
+                        <div class="form-group row">
+                            <label class="col-form-label-lg col-sm-2 text-sm-right">Large label</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-lg" placeholder="Large input">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label-sm col-sm-2 text-sm-right">Small label</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-sm" placeholder="Small input">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/js/file-browse.js"></script>
+    <script src="~/assets/js/demo/basic-layout-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewData["Title"] = "Pickers";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Pickers</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>A picker allows the user to select a date from a calendar</p>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bootstrap Datepicker</h4>
+                    <input type="text" class="form-control mb-4" id="datepicker-base">
+                    <!-- Features -->
+                    <input type="text" class="form-control mb-4" id="datepicker-features">
+                    <!-- Range -->
+                    <div class="input-daterange input-group mb-4" id="datepicker-range">
+                        <input type="text" class="form-control" name="start">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">to</span>
+                        </div>
+                        <input type="text" class="form-control" name="end">
+                    </div>
+                    <div id="datepicker-inline"></div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Bootstrap DateRangepicker</h4>
+                    <input type="text" id="daterange-1" value="01/01/2015 - 01/31/2015" class="form-control mb-4">
+                    <input type="text" id="daterange-2" value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM" class="form-control mb-4">
+                    <input type="text" id="daterange-3" value="10/24/1984" class="form-control mb-4">
+                    <button id="daterange-4" class="btn btn-default dropdown-toggle md-btn-flat"></button>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Calender</h4>
+                    <div class="calendar3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Todo Calender</h4>
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <article class="card mb-4">
+                <div class="card-body demo-vertical-spacing">
+                    <h4 class="card-title mb-4">Color Picker</h4>
+                    <input type="text" id="minicolors-hue" class="form-control" value="#ff6161">
+                    <input type="text" id="minicolors-saturation" class="form-control" value="#0088cc">
+                    <input type="text" id="minicolors-wheel" class="form-control" value="#ff99ee">
+                    <input type="text" id="minicolors-opacity" class="form-control" value="#766fa8" data-opacity=".5">
+                    <input type="text" id="minicolors-brightness" class="form-control" value="#00ffff">
+                    <input type="hidden" id="minicolors-hidden" class="form-control" value="#db913d">
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link rel="stylesheet" href="~/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="~/assets/vendor/bootstrap-daterangepicker/css/daterangepicker.css" />
+    <link rel="stylesheet" href="~/assets/vendor/minicolors/css/jquery.minicolors.css" />
+    <link rel="stylesheet" href="~/assets/vendor/pignose-calender/css/pignose.calendar.min.css" />
+    <link rel="stylesheet" href="~/assets/vendor/fullcalender/css/fullcalendar.min.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/assets/vendor/bootstrap-daterangepicker/js/moment.min.js"></script>
+    <script src="~/assets/vendor/bootstrap-daterangepicker/js/daterangepicker.js"></script>
+    <script src="~/assets/vendor/minicolors/js/jquery.minicolors.js"></script>
+    <script src="~/assets/vendor/pignose-calender/js/pignose.calendar.full.min.js"></script>
+    <script src="~/assets/vendor/fullcalender/js/fullcalendar.min.js"></script>
+    <script src="~/assets/js/demo/pickers-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}

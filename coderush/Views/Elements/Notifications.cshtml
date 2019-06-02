@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewData["Title"] = "Notifications";
+}
+
+<!-- Content Start -->
+<div class="content-wrapper">
+    <!-- Heading Start -->
+    <section class="heading">
+        <h1 class="mb-2">Notifications</h1>
+        <div class="breadcrumb-container">
+            <div class="titles">
+                <p>A notification shows the instant actions performed by user.</p>
+            </div>
+        </div>
+    </section><!-- Heading End -->
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Default Notifications</h4>
+                    <div class="alert alert-primary alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is a primary alert — check it out!
+                    </div>
+                    <div class="alert alert-secondary alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is a secondary alert — check it out!
+                    </div>
+                    <div class="alert alert-success alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is a success alert — check it out!
+                    </div>
+                    <div class="alert alert-danger alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is a danger alert — check it out!
+                    </div>
+                    <div class="alert alert-warning alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is a warning alert — check it out!
+                    </div>
+                    <div class="alert alert-info alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is an info alert — check it out!
+                    </div>
+                    <div class="alert alert-dark alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is a dark alert — check it out!
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Dark Notifications</h4>
+                    <div class="alert bg-primary text-white alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is a primary alert — check it out!
+                    </div>
+                    <div class="alert bg-secondary text-dark alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is a secondary alert — check it out!
+                    </div>
+                    <div class="alert bg-success text-white alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is a success alert — check it out!
+                    </div>
+                    <div class="alert bg-danger text-white  alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is a danger alert — check it out!
+                    </div>
+                    <div class="alert bg-warning text-white  alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is a warning alert — check it out!
+                    </div>
+                    <div class="alert bg-info text-white alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is an info alert — check it out!
+                    </div>
+                    <div class="alert bg-dark text-white alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        This is an info alert — check it out!
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-12 col-md-6">
+            <article class="card mb-4">
+                <div class="card-body btn-inline-spacing growls-btn">
+                    <h4 class="card-title mb-4">Growl</h4>
+                    <button id="default" class="btn btn-default mr-2">Default</button>
+                    <button id="info" class="btn btn-info mr-2">Notice</button>
+                    <button id="warning" class="btn btn-warning mr-2">Warning</button>
+                    <button id="danger" class="btn btn-danger mr-2">Error</button>
+                    <button id="primary" class="btn btn-primary mr-2">Static</button>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div id="growl-container">
+    </div>
+</div>
+<!-- Content End -->
+
+@section Styles{
+
+}
+
+@section Scripts{
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="~/assets/js/demo/notifications-demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+}
