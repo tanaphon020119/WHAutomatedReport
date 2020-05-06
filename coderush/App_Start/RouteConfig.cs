@@ -16,7 +16,7 @@ namespace coderush
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Dashboard", action = "Dashboard1", id = UrlParameter.Optional }
+                defaults: new { controller = "ReportChart", action = "ReportChart", id = UrlParameter.Optional }
             );
         }
     }

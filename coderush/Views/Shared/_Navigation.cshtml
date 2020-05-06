@@ -5,6 +5,131 @@
             <li class="nav-heading">
                 Navigation
             </li>
+            <li class="nav-item @Html.IsSelected(controller: "Report")Route">
+                <a class="nav-link has-submenu waves-effect open" title="LPC Report" href="javascript:void(0)">
+                    <i class="mdi mdi-view-dashboard md-18 mr-2"></i>
+                    <span class="menu-title">Report</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "ReportChart", action: Pages.ReportChart1.Value)" href="/ReportChart/@Pages.ReportChart1.Value">@Pages.ReportChart1.Value</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report1.Value)" href="/Report/@Pages.Report1.Value">@Pages.Report1.Value</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Report")Route">
+                <a class="nav-link has-submenu waves-effect open" title="LPC Report" href="javascript:void(0)">
+                    <i class="mdi mdi-truck md-18 mr-2"></i>
+                    <span class="menu-title">Report LPC</span>
+                </a>
+                <div class="sub-menu level1">
+                    <ul>
+                        <li class="nav-item @Html.IsSelected(controller: "Report")Route">
+                            <a class="nav-link has-submenu" href="javascript:void(0)">
+                                Report LPC004
+                            </a>
+                            <div class="sub-menu level2">
+                                <ul>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_LPC_FIX_ALL_FLEET_SRB.Value)" href="/Report/@Pages.Report_LPC004_LPC_FIX_ALL_FLEET_SRB.Value">@Pages.Report_LPC004_LPC_FIX_ALL_FLEET_SRB.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_Cement_Bulk_FLEET_LP.Value)" href="/Report/@Pages.Report_LPC004_Cement_Bulk_FLEET_LP.Value">@Pages.Report_LPC004_Cement_Bulk_FLEET_LP.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_Cement_Bulk_TS.Value)" href="/Report/@Pages.Report_LPC004_Cement_Bulk_TS.Value">@Pages.Report_LPC004_Cement_Bulk_TS.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_Mortar_Bulk_FLEET_SRB.Value)" href="/Report/@Pages.Report_LPC004_Mortar_Bulk_FLEET_SRB.Value">@Pages.Report_LPC004_Mortar_Bulk_FLEET_SRB.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_Mortar_Bulk_FLEET_KW.Value)" href="/Report/@Pages.Report_LPC004_Mortar_Bulk_FLEET_KW.Value">@Pages.Report_LPC004_Mortar_Bulk_FLEET_KW.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_Mortar_Bulk_FLEET_TS.Value)" href="/Report/@Pages.Report_LPC004_Mortar_Bulk_FLEET_TS.Value">@Pages.Report_LPC004_Mortar_Bulk_FLEET_TS.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_PFA_PPD.Value)" href="/Report/@Pages.Report_LPC004_PFA_PPD.Value">@Pages.Report_LPC004_PFA_PPD.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_Cement_Bulk_PPD.Value)" href="/Report/@Pages.Report_LPC004_Cement_Bulk_PPD.Value">@Pages.Report_LPC004_Cement_Bulk_PPD.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_Cement_Bulk_SRC.Value)" href="/Report/@Pages.Report_LPC004_Cement_Bulk_SRC.Value">@Pages.Report_LPC004_Cement_Bulk_SRC.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_KCL.Value)" href="/Report/@Pages.Report_LPC004_KCL.Value">@Pages.Report_LPC004_KCL.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_Fly_Ash.Value)" href="/Report/@Pages.Report_LPC004_Fly_Ash.Value">@Pages.Report_LPC004_Fly_Ash.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_Cement_White_Bulk.Value)" href="/Report/@Pages.Report_LPC004_Cement_White_Bulk.Value">@Pages.Report_LPC004_Cement_White_Bulk.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_Cementh_Rajasri.Value)" href="/Report/@Pages.Report_LPC004_Cementh_Rajasri.Value">@Pages.Report_LPC004_Cementh_Rajasri.Text</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004_Barite.Value)" href="/Report/@Pages.Report_LPC004_Barite.Value">@Pages.Report_LPC004_Barite.Text</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item @Html.IsSelected(controller: "Report")Route">
+                            <a class="nav-link has-submenu" href="javascript:void(0)">
+                                Report LPC010
+                            </a>
+                            <div class="sub-menu level2">
+                                <ul>
+                                    <li class="nav-item">
+                                        <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC010_All.Value)" href="/Report/@Pages.Report_LPC010_All.Value">@Pages.Report_LPC010_All.Text</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        @*<li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC004.Value)" href="/Report/@Pages.Report_LPC004.Value">@Pages.Report_LPC004.Value</a>
+                        </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC007.Value)" href="/Report/@Pages.Report_LPC007.Value">@Pages.Report_LPC007.Value</a>
+                        </li>
+                        @*<li class="nav-item">
+                            <a class="nav-link @Html.IsSelected(controller: "Report", action: Pages.Report_LPC010.Value)" href="/Report/@Pages.Report_LPC010.Value">@Pages.Report_LPC010.Value</a>
+                        </li>*@
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Report")Route">
+                <a class="nav-link has-submenu waves-effect open" title="LPC Report" href="javascript:void(0)">
+                    <i class="mdi mdi-truck-delivery md-18 mr-2"></i>
+                    <span class="menu-title">Report FS</span>
+                </a>
+                <div class="sub-menu level1">
+                    
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Report")Route">
+                <a class="nav-link has-submenu waves-effect open" title="LPC Report" href="javascript:void(0)">
+                    <i class="mdi mdi-file-multiple md-18 mr-2"></i>
+                    <span class="menu-title">Report AE</span>
+                </a>
+                <div class="sub-menu level1">
+
+                </div>
+            </li>
+            <li class="nav-item @Html.IsSelected(controller: "Report")Route">
+                <a class="nav-link has-submenu waves-effect open" title="LPC Report" href="javascript:void(0)">
+                    <i class="mdi mdi-file-multiple md-18 mr-2"></i>
+                    <span class="menu-title">Report BU Customer</span>
+                </a>
+                <div class="sub-menu level1">
+                    
+                </div>
+            </li>
             <li class="nav-item @Html.IsSelected(controller: "Dashboard")Route">
                 <a class="nav-link has-submenu waves-effect open" title="Dashboard" href="javascript:void(0)">
                     <i class="mdi mdi-view-dashboard md-18 mr-2"></i>
@@ -366,8 +491,8 @@
                         </li>
                     </ul>
                 </div>
-            </li>           
-            
+            </li>
+
         </ul>
     </nav>
 </aside>

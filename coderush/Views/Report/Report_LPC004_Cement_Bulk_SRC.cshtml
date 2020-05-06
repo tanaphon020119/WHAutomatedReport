@@ -1,0 +1,479 @@
+﻿@{
+    ViewBag.Title = "Report_LPC004_Cement_Bulk_SRC";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Nice Theme </title>
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" type="image/x-icon" />
+
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link href="~/assets/vendor/data-table/css/jquery.dataTables.min.css" />
+    <link href="~/assets/vendor/data-table/css/buttons.dataTables.min.css" />
+    <link href="~/assets/vendor/data-table/css/dataTables.bootstrap.min.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="~/assets/vendor/jQuery/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/Chart.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/jquery.dataTables.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/dataTables.buttons.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/buttons.flash.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/jszip.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/pdfmake.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/vfs_fonts.js"></script>
+    <script src="~/assets/vendor/data-table/js/buttons.html5.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/buttons.print.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/dataTables.bootstrap.min.js"></script>
+    <!-- ================== END BASE JS ================== -->
+
+    <script>
+        /*-----------------------*/
+        /*Initial on Webpage Load*/
+        /*-----------------------*/
+        $(document).ready(function () {
+            //Report Type
+            var reporttype = "Cement_Bulk_SRC";
+
+            //get current month
+            var currentdate = new Date();
+            var currentmonth = currentdate.getMonth() + 1;
+            var currentyear = currentdate.getFullYear();
+            var currentmonthname = getMonthName(currentmonth);
+
+            //set chart, table element = hidden
+            //var sectionMonthlyChart = document.getElementById('DailyShipmentStatus');
+            //sectionMonthlyChart.style.visibility = 'hidden';
+            var sectionMonthlyTable = document.getElementById('ShipmentStatusDetail');
+            sectionMonthlyTable.style.visibility = 'hidden';
+
+            var sectionMonthlyChartText = document.getElementById('DailyShipmentStatusText');
+            sectionMonthlyChartText.innerText = "สรุปการจัดเที่ยวประจำเดือน " + currentmonthname;
+
+            //Yearly chart
+            //GetYearlyChartData(currentyear);
+            //
+            GetCurrentDateShipmentStatus(currentmonth, currentdate.getDate(), reporttype);
+            //Monthly chart
+            GetMonthlyChartTable(currentmonth, null, reporttype);
+            //Monthly Table
+            DrawTableDetail(currentmonth, null, reporttype);
+        });
+    </script>
+
+    <script>
+        function GetCurrentDateShipmentStatus(currentmonth, currentday, reporttype) {
+            var data = { "selectmonth": currentmonth, "selectday": currentday, "reporttype": reporttype };
+            //Get Monthly Chart Data
+            $.ajax({
+                url: '@Url.Action("GetLPC004_Summary_Shipment_status", "Report")',
+                type: 'POST',
+                dataType: 'Json',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify(data)
+            }).done(function (response) {
+                //Populate chart data and show the modal
+                var section_SM_Tender = document.getElementById('SM_Tender');
+                var section_SM_Accept = document.getElementById('SM_Accept');
+                var section_SM_Inbound = document.getElementById('SM_Inbound');
+                var section_SM_GI = document.getElementById('SM_GI');
+
+                section_SM_Tender.innerHTML = response.SM_Tender;
+                section_SM_Accept.innerHTML = response.SM_Accept;
+                section_SM_Inbound.innerHTML = response.SM_Inbound;
+                section_SM_GI.innerHTML = response.SM_GI;
+
+            }).fail(function (error) {
+                console.log(error);
+            });
+        }
+
+        function GetMonthlyChartTable(currentmonth, currentday, reporttype) {
+
+            //Placeholder for input parameters
+            var data = { "selectmonth": currentmonth, "selectday": currentday , "reporttype": reporttype };
+
+            //Get Monthly Chart Data
+            $.ajax({
+                url: '@Url.Action("GetShipmentStatusChart_ByType", "ReportChart")',
+                type: 'POST',
+                dataType: 'Json',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify(data)
+            }).done(function (response) {
+                //Populate chart data and show the modal
+                console.log(response);
+                var section = document.getElementById('DailyShipmentStatus');
+                section.style.visibility = 'visible';
+                var section = document.getElementById('ShipmentStatusDetail');
+                section.style.visibility = 'visible';
+                PopulateDataShipmentStatus(response, reporttype);
+            }).fail(function (error) {
+                console.log(error);
+            });
+        }
+
+        function PopulateDataShipmentStatus(data, reporttype) {
+            var ctx = document.getElementById("barChartShipmentStatus").getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+                options: {
+                    scales: {
+                        xAxes: [{
+                            stacked: true,
+                            gridLines: {
+                                display: false,
+                            }
+                        }],
+                        yAxes: [{
+                            stacked: true,
+                            ticks: {
+                                beginAtZero: true,
+                            },
+                            type: 'linear',
+                        }]
+                    },
+                    elements: {
+                        line: {
+                                fill: false
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                        position: "top"
+                    }
+                }
+            });
+            var canvas = document.getElementById('barChartShipmentStatus');
+            canvas.onclick = function (evt) {
+                var activePoint = myChart.getElementAtEvent(evt)[0];
+                var data = activePoint._chart.data;
+                var datasetIndex = activePoint._datasetIndex;
+                var label = data.datasets[datasetIndex].label;
+                var value = data.datasets[datasetIndex].data[activePoint._index];
+                var active_index = activePoint._index + 1;
+                //console.log(label, value);
+                //console.log(active_index);
+                var currentdate = new Date();
+                var currentmonth = currentdate.getMonth() + 1;
+                //console.log(currentmonth, active_index);
+                //RefreshData(currentmonth, active_index);
+                DrawTableDetail(currentmonth, active_index, reporttype);
+            };
+        }
+
+        function DrawTableDetail(currentmonth, currentdate, reporttype) {
+
+            var sectionShipmentStatusDetailText = document.getElementById('ShipmentStatusDetailText');
+            var currentmonthname = getMonthName(currentmonth);
+            if (currentdate != null) sectionShipmentStatusDetailText.innerText = "รายละเอียดการจัดเที่ยวประจำเดือน " + currentmonthname + " ของวันที่ " + currentdate;
+            else sectionShipmentStatusDetailText.innerText = "รายละเอียดการจัดเที่ยวประจำเดือน " + currentmonthname;
+            //Placeholder for input parameters
+            var data = { "selectmonth": currentmonth, "selectday": currentdate, "reporttype": reporttype };
+
+            if (currentdate != null) var table = $("#view_report_table").DataTable().destroy();
+
+            var table = $("#view_report_table").DataTable({
+                "ajax": {
+                    url: '@Url.Action("GetLPC004Data_Table_ByType", "Report")',
+                    type: 'POST',
+                    dataType: 'Json',
+                    "data": function (d) {
+                        d.selectmonth = currentmonth;
+                        d.selectday = currentdate;
+                        d.reporttype = reporttype;
+                    },
+                },
+                scrollX: true,
+                ordering: false,
+                responsive: true,
+                dom: 'lTf<"html5buttons"B>gtip',
+                pageLength: 10,
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ],
+                "columns": [
+                    { "data": "No" },
+                    { "data": "DestinationName", className: "text-nowrap" },
+                    { "data": "OrderNumber", className: "text-nowrap" },
+                    { "data": "SMWeight", className: "text-nowrap" },
+                    { "data": "DNNumber", className: "text-nowrap" },
+                    { "data": "GIDate", className: "text-nowrap" },
+                    { "data": "SMNumber", className: "text-nowrap" },
+                    { "data": "ActualTenderStatus", className: "text-nowrap" },
+                    { "data": "EquipmentTypeName", className: "text-nowrap" },
+                    { "data": "CarrierName", className: "text-nowrap" },
+                    { "data": "RequestDate", className: "text-nowrap" },
+                    { "data": "ShippingPointCode", className: "text-nowrap" },
+                    { "data": "ShippingPointName", className: "text-nowrap" },
+                    { "data": "TotalDistance", className: "text-nowrap" },
+                    { "data": "ActualDeliveryDate", className: "text-nowrap" },
+                    { "data": "SMRemark", className: "text-nowrap" },
+                    { "data": "TruckLicense", className: "text-nowrap" },
+                    { "data": "ShiptoCode", className: "text-nowrap" },
+                    { "data": "ShiptoRegion", className: "text-nowrap" },
+                    { "data": "CustomerName", className: "text-nowrap" },
+                    { "data": "CommodityCode", className: "text-nowrap" },
+                    { "data": "CommodityDescrition", className: "text-nowrap" },
+                    { "data": "SMDescription", className: "text-nowrap" },
+                    { "data": "ActualTenderDate", className: "text-nowrap" },
+                    { "data": "ActualTenderAcceptDate", className: "text-nowrap" },
+                    { "data": "ShiptoCity", className: "text-nowrap" },
+                    { "data": "SMStatus", className: "text-nowrap" },
+                    { "data": "Planner", className: "text-nowrap" },
+                    { "data": "SMCreateDate", className: "text-nowrap" },
+                    { "data": "MaterialDescription", className: "text-nowrap" },
+                    { "data": "PONumber", className: "text-nowrap" }
+                ]
+            });
+        }
+
+        function RefreshData(selectmonth, selectdate) {
+
+            //Monthly chart
+            //GetMonthlyChartTable(selectmonth);
+            //Monthly Table
+
+            DrawTableDetail(selectmonth, selectdate);
+
+            var currentmonthname = getMonthName(selectmonth);
+            //var sectionMonthlyChartText = document.getElementById('DailyShipmentStatusText');
+            //sectionMonthlyChartText.innerText = "สรุปการจัดเที่ยวประจำเดือน " + currentmonthname;
+            var sectionShipmentStatusDetailText = document.getElementById('ShipmentStatusDetailText');
+            sectionShipmentStatusDetailText.innerText = "รายละเอียดการจัดเที่ยวประจำเดือน " + currentmonthname;
+        }
+
+        function getMonthName(index) {
+            var month = new Array();
+            month[0] = "มกราคม";
+            month[1] = "กุมภาพันธ์";
+            month[2] = "มีนาคม";
+            month[3] = "เมษายน";
+            month[4] = "พฤษภาคม";
+            month[5] = "มิถุนายน";
+            month[6] = "กรกฎาคม";
+            month[7] = "สิงหาคม";
+            month[8] = "กันยายน";
+            month[9] = "ตุลาคม";
+            month[10] = "พฤษจิกายน";
+            month[11] = "ธันวาคม";
+            return month[index - 1];
+        }
+
+        function isEmpty(obj) {
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key))
+                    return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Content Start -->
+    <div class="content-wrapper">
+        <div class="row mb-4">
+            <div class="col-12 d-flex align-items-center justify-content-between">
+                <h4 class="page-title">Dashboard</h4>
+                <div class="d-flex align-items-center">
+                    <div class="wrapper mr-4 d-none d-sm-block">
+                        @*<p class="mb-0">
+                                ข้อมูลสรุป ณ.
+                                <b class="mb-0">วัน @DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm")</b> (in @ViewBag.PROCESSINGTIME sec.)
+                            </p>*@
+                    </div>
+                    <div class="wrapper">
+                        <a href="#" class="btn btn-link d-inline-flex font-weight-bold">
+                            <i class="icon-share-alt mr-1"></i>Export CSV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 card-statistics">
+                <h4 class="card-title">สถานะจัดเที่ยวขนส่งวัน @DateTime.Now.ToString("dddd, dd MMMM yyyy")</h4>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn btn-info btn-rounded px-3 py-3 mr-2">
+                                        <i class="icon-docs md-18"></i>
+                                    </div>
+                                    <div class="mr-2">
+                                        <h5 class="card-title">จำนวนเที่ยว</h5>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar bg-info w-100" role="progressbar" aria-valuenow="100"
+                                                 aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2 id="SM_Tender">@ViewBag.SM_Tender</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn btn-danger btn-rounded px-3 py-3 mr-2">
+                                        <i class="icon-wallet md-18"></i>
+                                    </div>
+                                    <div class="mr-2">
+                                        <h5 class="card-title">ตอบรับงาน</h5>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar bg-danger w-75" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                                 aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2 id="SM_Accept">@ViewBag.SM_Accept</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn btn-warning btn-rounded px-3 py-3 mr-2">
+                                        <i class="icon-basket md-18"></i>
+                                    </div>
+                                    <div class="mr-2">
+                                        <h5 class="card-title">เข้ารับสินค้า</h5>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar bg-warning w-50" role="progressbar" aria-valuenow="25"
+                                                 aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2 id="SM_Inbound">@ViewBag.SM_Inbound</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn btn-success btn-rounded px-3 py-3 mr-2">
+                                        <i class="icon-wallet md-18"></i>
+                                    </div>
+                                    <div class="mr-2">
+                                        <h5 class="card-title">ตัดจ่าย</h5>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar bg-success w-25" role="progressbar" aria-valuenow="25"
+                                                 aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2 id="SM_GI">@ViewBag.SM_GI</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="DailyShipmentStatus">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" id="DailyShipmentStatusText"></h4>
+                        <div class="chart-container">
+                            <canvas id="barChartShipmentStatus"></canvas>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="ShipmentStatusDetail">
+            <div class="col-12">
+                <article class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title" id="ShipmentStatusDetailText"></h4>
+                        <div class="table-responsive">
+                            <div class="dataTables_wrapper">
+                                <table class="table table-striped" id="view_report_table" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>หน่วยงาน</th>
+                                            <th>SO/STO</th>
+                                            <th>น้ำหนัก</th>
+                                            <th>Delivery No</th>
+                                            <th>GIDate</th>
+                                            <th>Shipment No</th>
+                                            <th>Accept</th>
+                                            <th>ประเภทรถ</th>
+                                            <th>ผู้รับเหมาขนส่ง</th>
+                                            <th>Req Date</th>
+                                            <th>SP-Code</th>
+                                            <th>จุดจ่าย</th>
+                                            <th>ระยะทาง</th>
+                                            <th>ลูกค้าได้รับสินค้า</th>
+                                            <th>หมายเหตุ</th>
+                                            <th>ทะเบียน TMS</th>
+                                            <th>Ship-to Code</th>
+                                            <th>ภาค</th>
+                                            <th>ลูกค้า</th>
+                                            <th>กลุ่มสินค้า</th>
+                                            <th>สินค้า</th>
+                                            <th>Load Description</th>
+                                            <th>เวลา Tender</th>
+                                            <th>เวลา Accept</th>
+                                            <th>Last Cty Name</th>
+                                            <th>Last Sec Cd</th>
+                                            <th>Crtd Usr Cd</th>
+                                            <th>Create Day</th>
+                                            <th>ชื่อสินค้า</th>
+                                            <th>PO service</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- Content End -->
+
+    @section Styles{
+        <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+        <link href="~/assets/vendor/data-table/css/jquery.dataTables.min.css" />
+        <link href="~/assets/vendor/data-table/css/buttons.dataTables.min.css" />
+        <link href="~/assets/vendor/data-table/css/dataTables.bootstrap.min.css" />
+        <!-- ================== BEGIN PAGE LEVEL END ================== -->
+    }
+
+    @section Scripts{
+        <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+        <script src="~/assets/vendor/data-table/js/jquery.dataTables.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/dataTables.buttons.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/buttons.flash.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/jszip.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/pdfmake.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/vfs_fonts.js"></script>
+        <script src="~/assets/vendor/data-table/js/buttons.html5.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/buttons.print.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/dataTables.bootstrap.min.js"></script>
+        <!-- ================== END PAGE LEVEL JS ================== -->
+    }
+
+</body>
+</html>

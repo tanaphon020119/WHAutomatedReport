@@ -2,7 +2,10 @@ var isRtl = $('html').attr('dir') === 'rtl';
 
 // DatePicker Plugin Call
 $(function () {
-	$('#datepicker-base').datepicker({
+    $('#datepicker-base').datepicker({
+        format: "mm-yyyy",
+        viewMode: "months",
+        minViewMode: "months",
 		orientation: isRtl ? 'auto right' : 'auto left'
 	});
 

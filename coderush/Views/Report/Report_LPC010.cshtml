@@ -1,0 +1,152 @@
+﻿@{
+    ViewBag.Title = "Report LPC010";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Nice Theme </title>
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" type="image/x-icon" />
+
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link href="~/assets/vendor/data-table/css/jquery.dataTables.min.css" />
+    <link href="~/assets/vendor/data-table/css/buttons.dataTables.min.css" />
+    <link href="~/assets/vendor/data-table/css/dataTables.bootstrap.min.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="~/assets/vendor/jQuery/js/jquery-3.2.1.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/jquery.dataTables.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/dataTables.buttons.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/buttons.flash.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/jszip.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/pdfmake.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/vfs_fonts.js"></script>
+    <script src="~/assets/vendor/data-table/js/buttons.html5.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/buttons.print.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/dataTables.bootstrap.min.js"></script>
+    <!-- ================== END BASE JS ================== -->
+
+    <script>
+        $(document).ready(function () {
+            $("#view_report_table").DataTable({
+                "ajax": {
+                    url: '@Url.Action("GetLPC010Data", "Report")',
+                    type: 'POST',
+                    dataType: 'Json'
+                },
+                scrollX: true,
+                ordering: false,
+                dom: 'lTf<"html5buttons"B>gtip',
+                pageLength: 10,
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ],
+                "columns": [
+                    { "data": "No" },
+                    { "data": "StatusDescription", className: "text-nowrap" },
+                    { "data": "User", className: "text-nowrap" },
+                    { "data": "SMCreateDate", className: "text-nowrap" },
+                    { "data": "ReqID", className: "text-nowrap" },
+                    { "data": "SMNumber", className: "text-nowrap" },
+                    { "data": "NumberofDN", className: "text-nowrap" },
+                    { "data": "TrackingNo", className: "text-nowrap" },
+                    { "data": "CustomerName", className: "text-nowrap" },
+                    { "data": "EquipmentTypeName", className: "text-nowrap" },
+                    { "data": "CarrierCode", className: "text-nowrap" },
+                    { "data": "TotalStop", className: "text-nowrap" },
+                    { "data": "TotalWeight", className: "text-nowrap" },
+                    { "data": "TotalVolume", className: "text-nowrap" },
+                    { "data": "UtiWeight", className: "text-nowrap" },
+                    { "data": "UtiVol", className: "text-nowrap" },
+                    { "data": "Type", className: "text-nowrap" }
+                ]
+            });
+        });
+
+        function isEmpty(obj) {
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key))
+                    return false;
+            }
+            return true;
+        };
+    </script>
+
+</head>
+<body>
+
+    <!-- Content Start -->
+    <div class="content-wrapper">
+        <!-- Heading Start -->
+        <section class="heading">
+            <h1 class="mb-2">LPC 010 Report</h1>
+            <div class="breadcrumb-container">
+                <div class="titles">
+                    <p>Total @ViewData["Summary"] records. (in @ViewBag.PROCESSINGTIME sec.)</p>
+                </div>
+            </div>
+        </section><!-- Heading End -->
+        <div class="row">
+            <div class="col-12">
+                <article class="card mb-4">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <div class="dataTables_wrapper">
+                                <table class="table table-striped" id="view_report_table" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>StatusDescription</th>
+                                            <th>User</th>
+                                            <th>Date</th>
+                                            <th>ReqID</th>
+                                            <th>เลขที่ Shipment</th>
+                                            <th>จำนวน DN</th>
+                                            <th>Tracking No</th>
+                                            <th>ลูกค้า</th>
+                                            <th>ประเภทรถ</th>
+                                            <th>ผรม</th>
+                                            <th>จำนวน Drop</th>
+                                            <th>Weight</th>
+                                            <th>Volume</th>
+                                            <th>Utiwgt</th>
+                                            <th>Utivol</th>
+                                            <th>Type</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- Content End -->
+
+    @section Styles{
+        <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+        <link href="~/assets/vendor/data-table/css/jquery.dataTables.min.css" />
+        <link href="~/assets/vendor/data-table/css/buttons.dataTables.min.css" />
+        <link href="~/assets/vendor/data-table/css/dataTables.bootstrap.min.css" />
+        <!-- ================== BEGIN PAGE LEVEL END ================== -->
+    }
+
+    @section Scripts{
+        <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+        <script src="~/assets/vendor/data-table/js/jquery.dataTables.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/dataTables.buttons.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/buttons.flash.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/jszip.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/pdfmake.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/vfs_fonts.js"></script>
+        <script src="~/assets/vendor/data-table/js/buttons.html5.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/buttons.print.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/dataTables.bootstrap.min.js"></script>
+        <!-- ================== END PAGE LEVEL JS ================== -->
+    }
+
+</body>
+</html>

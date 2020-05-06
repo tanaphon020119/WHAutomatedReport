@@ -1,6 +1,6 @@
 // Generate Chart
 function chart(id, type, data, options) {
-	var canvas = document.getElementById(id);
+    var canvas = document.getElementById(id);
 	var ctx = canvas.getContext('2d');
 	new Chart(ctx, {
 		type: type,

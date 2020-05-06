@@ -1,0 +1,166 @@
+﻿@{
+    ViewBag.Title = "Report LPC007";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Nice Theme </title>
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" type="image/x-icon" />
+
+    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+    <link href="~/assets/vendor/data-table/css/jquery.dataTables.min.css" />
+    <link href="~/assets/vendor/data-table/css/buttons.dataTables.min.css" />
+    <link href="~/assets/vendor/data-table/css/dataTables.bootstrap.min.css" />
+    <!-- ================== BEGIN PAGE LEVEL END ================== -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="~/assets/vendor/jQuery/js/jquery-3.2.1.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/jquery.dataTables.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/dataTables.buttons.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/buttons.flash.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/jszip.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/pdfmake.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/vfs_fonts.js"></script>
+    <script src="~/assets/vendor/data-table/js/buttons.html5.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/buttons.print.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/dataTables.bootstrap.min.js"></script>
+    <!-- ================== END BASE JS ================== -->
+
+    <script>
+        $(document).ready(function () {
+            var table = $("#view_report_table").DataTable({
+                "ajax": {
+                    url: '@Url.Action("GetLPC007Data", "Report")',
+                    type: 'POST',
+                    dataType: 'Json'
+                },
+                scrollX: true,
+                ordering: false,
+                responsive: true,
+                dom: 'lTf<"html5buttons"B>gtip',
+                pageLength: 10,
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ],
+                "columns": [
+                    { "data": "No" },
+                    { "data": "SMCreateDate", className: "text-nowrap" },
+                    { "data": "SONumber", className: "text-nowrap" },
+                    { "data": "CustomerName", className: "text-nowrap" },
+                    { "data": "Incoterm1", className: "text-nowrap" },
+                    { "data": "TotalWeight", className: "text-nowrap" },
+                    { "data": "ShiptoDistrict", className: "text-nowrap" },
+                    { "data": "ShiptoStreet", className: "text-nowrap" },
+                    { "data": "ShiptoName", className: "text-nowrap" },
+                    { "data": "MaterialDescription", className: "text-nowrap" },
+                    { "data": "ShiptoRegionCode", className: "text-nowrap" },
+                    { "data": "DNNumber", className: "text-nowrap" },
+                    { "data": "SMNumber", className: "text-nowrap" },
+                    { "data": "CarrierName", className: "text-nowrap" },
+                    { "data": "EquipmentTypeName", className: "text-nowrap" },
+                    { "data": "SMDescription", className: "text-nowrap" },
+                    { "data": "ShippingPointName", className: "text-nowrap" },
+                    { "data": "RequestDeliveryDate", className: "text-nowrap" },
+                    { "data": "GIDate", className: "text-nowrap" },
+                    { "data": "TruckLicense", className: "text-nowrap" },
+                    { "data": "ActualDeliveryDate", className: "text-nowrap" },
+                    { "data": "ActualDocumentReturnDate", className: "text-nowrap" },
+                    { "data": "PlannerName", className: "text-nowrap" }
+                ]
+            });
+        });
+
+        function isEmpty(obj) {
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key))
+                    return false;
+            }
+            return true;
+        };
+    </script>
+
+</head>
+<body>
+
+    <!-- Content Start -->
+    <div class="content-wrapper">
+        <!-- Heading Start -->
+        <section class="heading">
+            <h1 class="mb-2">LPC 007 Report</h1>
+            <div class="breadcrumb-container">
+                <div class="titles">
+                    <p>Total @ViewData["Summary"] records. (in @ViewBag.PROCESSINGTIME sec.)</p>
+                </div>
+            </div>
+        </section><!-- Heading End -->
+        <div class="row">
+            <div class="col-12">
+                <article class="card mb-4">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <div class="dataTables_wrapper">
+                                <table class="table table-striped" id="view_report_table" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>วันที่</th>
+                                            <th>SO</th>
+                                            <th>ชื่อลูกค้า</th>
+                                            <th>CH.ขาย</th>
+                                            <th>นน.(ตัน)</th>
+                                            <th>อำเภอ</th>
+                                            <th>จังหวัด</th>
+                                            <th>ปลายทาง</th>
+                                            <th>ตรา</th>
+                                            <th>ภาค</th>
+                                            <th>DN</th>
+                                            <th>LOAD</th>
+                                            <th>ผรม.</th>
+                                            <th>ประเภทรถขนส่ง</th>
+                                            <th>หมายเหตุ 1</th>
+                                            <th>รง.ต้นทาง</th>
+                                            <th>กำหนดวันส่งมอบ</th>
+                                            <th>GI DATE</th>
+                                            <th>หมายเลขทะเบียน</th>
+                                            <th>วันที่ ล/ค รับสินค้า</th>
+                                            <th>วันที่นำส่ง DP</th>
+                                            <th>Planner</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- Content End -->
+
+    @section Styles{
+        <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+        <link href="~/assets/vendor/data-table/css/jquery.dataTables.min.css" />
+        <link href="~/assets/vendor/data-table/css/buttons.dataTables.min.css" />
+        <link href="~/assets/vendor/data-table/css/dataTables.bootstrap.min.css" />
+        <!-- ================== BEGIN PAGE LEVEL END ================== -->
+    }
+
+    @section Scripts{
+        <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+        <script src="~/assets/vendor/data-table/js/jquery.dataTables.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/dataTables.buttons.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/buttons.flash.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/jszip.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/pdfmake.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/vfs_fonts.js"></script>
+        <script src="~/assets/vendor/data-table/js/buttons.html5.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/buttons.print.min.js"></script>
+        <script src="~/assets/vendor/data-table/js/dataTables.bootstrap.min.js"></script>
+        <!-- ================== END PAGE LEVEL JS ================== -->
+    }
+
+</body>
+</html>

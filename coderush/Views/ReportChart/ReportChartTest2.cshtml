@@ -1,0 +1,253 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Nice Theme </title>
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" type="image/x-icon" />
+
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="~/assets/vendor/jQuery/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/Chart.min.js"></script>
+    <!-- ================== END BASE JS ================== -->
+
+    <script>
+        function PopulateData(data) {
+            var ctx = document.getElementById("barChartbas").getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+                options: {
+                    scales: {
+                        xAxes: [{
+                            stacked: true,
+                            gridLines: {
+                                display: false,
+                            }
+                        }],
+                        yAxes: [{
+                            stacked: true,
+                            ticks: {
+                                beginAtZero: true,
+                            },
+                            type: 'linear',
+                        }]
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                        position: "top"
+                    }
+                }
+            });
+            var canvas = document.getElementById('chartContainer');
+            var myChart = new Chart(canvas, chartData);
+
+            canvas.onclick = function (evt) {
+                var activePoint = myChart.getElementAtEvent(evt)[0];
+                var data = activePoint._chart.data;
+                var datasetIndex = activePoint._datasetIndex;
+                var label = data.datasets[datasetIndex].label;
+                var value = data.datasets[datasetIndex].data[activePoint._index];
+                console.log(label, value);
+                alert(value);
+            };
+        }
+
+        function isEmpty(obj) {
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key))
+                    return false;
+            }
+            return true;
+        };
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var chartData = {
+                type: 'bar',
+                data: {
+                    labels: ['A0224', 'A3681', 'A3984', 'A4101', 'A4150', 'B0682', 'Others'],
+                    datasets: [{
+                        label: "P1",
+                        backgroundColor: '#cc3399',
+                        data: [6, 7, 6, 8, 6, 10, 3]
+                    }, {
+                        label: "P2",
+                        backgroundColor: '#0099ff',
+                        data: [8, 9, 5, 8, 6, 10, 3]
+                    }, {
+                        label: "P3",
+                        backgroundColor: '#0022ff',
+                        data: [6, 7, 6, 8, 6, 10, 3]
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        yAxes: [{
+                            stacked: true
+                        }],
+                        xAxes: [{
+                            stacked: true
+                        }]
+                    },
+
+                }
+            }
+            var canvas = document.getElementById('chartContainer');
+            var myChart = new Chart(canvas, chartData);
+
+            canvas.onclick = function (evt) {
+                var activePoint = myChart.getElementAtEvent(evt)[0];
+                var data = activePoint._chart.data;
+                var datasetIndex = activePoint._datasetIndex;
+                var label = data.datasets[datasetIndex].label;
+                var value = data.datasets[datasetIndex].data[activePoint._index];
+                console.log(label, value);
+                alert(value);
+            };
+        });
+    </script>
+
+
+</head>
+<body>
+
+    <!-- Content Start -->
+    <div class="content-wrapper">
+        <div class="row mb-4">
+            <div class="col-12 d-flex align-items-center justify-content-between">
+                <h4 class="page-title">Dashboard</h4>
+                <div class="d-flex align-items-center">
+                    <div class="wrapper mr-4 d-none d-sm-block">
+                        <p class="mb-0">
+                            ข้อมูลสรุป ณ.
+                            <b class="mb-0">วัน @DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm")</b> (in @ViewBag.PROCESSINGTIME sec.)
+                        </p>
+                    </div>
+                    <div class="wrapper">
+                        <a href="#" class="btn btn-link d-inline-flex font-weight-bold">
+                            <i class="icon-share-alt mr-1"></i>Export CSV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 card-statistics">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn btn-info btn-rounded px-3 py-3 mr-2">
+                                        <i class="icon-docs md-18"></i>
+                                    </div>
+                                    <div class="mr-2">
+                                        <h5 class="card-title">จำนวนเที่ยว</h5>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar bg-info w-100" role="progressbar" aria-valuenow="100"
+                                                 aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2>@ViewBag.SM_Tender</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn btn-success btn-rounded px-3 py-3 mr-2">
+                                        <i class="icon-wallet md-18"></i>
+                                    </div>
+                                    <div class="mr-2">
+                                        <h5 class="card-title">ตอบรับงาน</h5>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar bg-success w-75" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                                 aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2>@ViewBag.SM_Accept</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn btn-warning btn-rounded px-3 py-3 mr-2">
+                                        <i class="icon-basket md-18"></i>
+                                    </div>
+                                    <div class="mr-2">
+                                        <h5 class="card-title">เข้ารับสินค้า</h5>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar bg-warning w-50" role="progressbar" aria-valuenow="25"
+                                                 aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2>@ViewBag.SM_Inbound</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn btn-danger btn-rounded px-3 py-3 mr-2">
+                                        <i class="icon-wallet md-18"></i>
+                                    </div>
+                                    <div class="mr-2">
+                                        <h5 class="card-title">ตัดจ่าย</h5>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar bg-danger w-25" role="progressbar" aria-valuenow="25"
+                                                 aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2>@ViewBag.SM_GI</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">สรุปสถานะ Shipment ประจำเดือน @DateTime.Now.ToString("MMMM")</h4>
+                        <div class="chart-container">
+                            <canvas id="chartContainer"></canvas>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content End -->
+
+
+</body>
+</html>

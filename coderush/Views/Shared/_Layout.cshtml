@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Nice Theme - @ViewData["Title"] </title>
+    <title> SCGL Reporting Services - @ViewData["Title"] </title>
     <link rel="shortcut icon" href="~/assets/images/favicon.png" type="image/x-icon" />
 
     @RenderSection("Styles", required: false)
@@ -30,14 +30,19 @@
     </div><!-- Wrapper End -->
     @Html.Partial("_Settings")
     <!-- ================== BEGIN BASE JS ================== -->
+    @*<script src="~/assets/vendor/jQuery/js/jquery-3.2.1.min.js"></script>
+        <script src="~/assets/vendor/bootstrap/js/popper.min.js"></script>
+        <script src="~/assets/vendor/bootstrap/js/bootstrap.min.js"></script>*@
     <script src="~/assets/vendor/jQuery/js/jquery-3.2.1.min.js"></script>
-    <script src="~/assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="~/assets/vendor/data-table/js/jquery.dataTables.min.js"></script>
     <script src="~/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!--[if lt IE 9]>
       <script src="~/assets/vendor/html5shiv/js/html5shiv.js"></script>
       <script src="~/assets/vendor/respondjs/js/respond.min.js"></script>
+
     <![endif]-->
     <script src="~/assets/js/app.js"></script>
+    @*<script src="~/Scripts/Chart.min.js"></script>*@
     <!-- ================== END BASE JS ================== -->
 
     @RenderSection("Scripts", required: false)
